@@ -1,0 +1,325 @@
+//Global Elements
+* {
+    @include box-sizing(border-box);
+}
+
+body {
+    @include font-light;
+    font-size: $font-size-base;
+    color: $darkgray;
+    background: $white;
+
+    @media (max-width: $screen-tablet) {
+        font-size: 18px;
+    }
+}
+
+h1 {
+    @include headline--large;
+}
+
+h2 {
+    @include headline--medium;
+}
+
+h3 {
+    @include headline--small;
+}
+
+.button {
+    @include btn;
+}
+
+i {
+    @include font-lightitalic;
+}
+
+
+.mbox {
+
+    .mbox__image {
+        text-align: center;
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    .mbox__paragraph {
+        text-align: justify;
+
+        @media (max-width: $screen-desktop) {
+            margin-bottom: 35px;
+        }
+    }
+
+    .mbox__btn-wrapper {
+        margin-top: 20px;
+    }
+
+    a {
+        color: $darkgray;
+    }
+
+    .button {
+        margin: 0 0 0 10px;
+
+        @media (max-width: $screen-lg-desktop) {
+            padding: 13px 4px;
+        }
+    }
+
+
+
+    #contactos & {
+        @media (min-width: $screen-desktop) {
+            width: 35%;
+        }
+
+        img {
+            float: left;
+        }
+
+        &.left {
+            @media (min-width: $screen-desktop) {
+                width: 28%;
+            }
+        }
+
+        &.right {
+            @media (min-width: $screen-desktop) {
+                width: 37%;
+            }
+
+            img {
+                float: none;
+                display: inline;
+            }
+        }
+
+
+    }
+}
+
+.some__list {
+    margin-top: 30px;
+}
+
+.some__list__item {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.section {
+    padding: 35px 0 80px; 
+
+    @media (max-width: $screen-desktop) {
+        padding: 30px 0 50px;
+    }
+
+    .quote & {
+        padding: 60px 0;
+
+        @media (max-width: $screen-desktop) {
+            padding: 30px 0;
+        }
+    }
+
+    &#contactos {
+        padding: 35px 0 60px;
+
+        @media (max-width: $screen-desktop) {
+            padding: 35px 0 0;
+        }
+    }
+
+    footer & {
+        padding: 0;
+        position: relative;
+
+        p {
+            border-top: 1px solid $darkgray;
+            font-size: 16px;
+            margin: 0;
+            padding: 20px 0;
+        }
+    }
+}
+
+.section__btn-wrapper {
+    margin-top: 65px;
+
+    @media (max-width: $screen-desktop) {
+        margin-top: 0;
+    }
+}
+
+.chat {
+    cursor: pointer;
+    background: $red;
+    border: 1px solid $darkred;
+    color: $white;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    width: 220px;
+    height: 30px;
+    padding: 5px 15px;
+    font-size: 14px;
+    -webkit-border-top-left-radius: 15px;
+    -webkit-border-top-right-radius: 15px;
+    -moz-border-radius-topleft: 15px;
+    -moz-border-radius-topright: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+
+//Header & Navigation
+header {
+    &.affix {
+        width: 100%;
+        background: white;
+        z-index: 1;
+        box-shadow: 0 4px 13px -1px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: 0 4px 13px -1px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.navbar {
+    margin: 0;
+    padding: 15px 0;
+    background: $white;
+    border: 0;
+
+    .affix & {
+        padding: 0;
+    }
+}
+
+.navbar-nav {
+    li {
+        a {
+            font-size: $font-size-nav;
+        }
+    }
+}
+
+.navbar-brand {
+    padding: 0;
+
+    img {
+        height: 100%;
+    }
+
+    .affix & {
+        img {
+            height: 40px;
+            margin-top: 5px;
+        }
+    }
+}
+
+.navbar-collapse {
+
+    @media (min-width: $screen-desktop) {
+        padding: 0;
+    }
+
+    @media (max-width: $screen-desktop) {
+        margin-top: 15px;
+
+        .affix & {
+            margin-top: 0;
+        }
+    }
+
+}
+
+.navbar-toggle {
+    border-color: $darkgray !important;
+    background-color: transparent !important;
+    margin-right: 0;
+
+    &:hover {
+        background-color: $lightgray !important;
+    }
+
+    .icon-bar {
+        background-color: $darkgray !important;
+    }
+}
+
+
+//Intro Section
+.intro {
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+}
+
+.intro__overlay {
+    position: absolute;
+    text-align: center;
+    bottom: 20px;
+    width: 100%;
+
+    @media (max-width: $screen-tablet) {
+        position: relative;
+        bottom: 0;
+    }
+}
+
+.intro__overlay__inner {
+    margin: 0 auto;
+    text-align: left;
+}
+
+.intro__paragraph {
+    color: $white;
+    font-size: 20px;
+    line-height: 25px;
+
+    @media (max-width: $screen-tablet) {
+        color: $darkgray;
+    }
+}
+
+
+//Quote Section
+.quote {
+    background: $darkgray;
+
+
+    blockquote {
+        border: 0;
+        padding: 35px 0;
+        margin: 0;
+
+        @media (max-width: $screen-phone) {
+            padding-top: 25px;
+        }
+
+        @media (min-width: $screen-phone ) and (max-width: $screen-desktop) {
+            padding: 0;
+        }
+
+        p {
+            color: $white;
+            font-size: 20px;
+
+            &:first-child {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+
+//Preguntas Section
+.preguntas {
+    background: $lightgray;
+}

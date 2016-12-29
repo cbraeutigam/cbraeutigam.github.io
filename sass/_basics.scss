@@ -1,0 +1,115 @@
+//Colors
+$white: #ffffff;
+$black: #000000;
+$darkgray: #6c676b;
+$lightgray: #f5f5f5;
+$red: #fc0019;
+$darkred: #c80000;
+
+//Font-sizes
+$font-size-base: 21px;
+$font-size-nav: 18px;
+$font-size-btn: 20px;
+
+$headline-large: 45px;
+$headline-medium: 40px;
+$headline-small: 25px;
+
+
+.copy {
+    &:before {
+        content: "\00a9";
+    }
+}
+
+
+//Headline Mixins
+@mixin headline--large($modifier:default) {
+    display: block;
+    font-size: $headline-large;
+    line-height: $headline-large + 8;
+    color: $white;
+    @include font-black;
+
+
+    @media (max-width: $screen-tablet) {
+        font-size: 35px;
+        line-height: 40px;
+        color: $darkgray;
+    }
+}
+
+@mixin headline--medium($modifier:default) {
+    display: block;
+    font-size: $headline-medium;
+    line-height: $headline-medium + 8;
+    color: $darkgray;
+    margin-bottom: 35px;
+    @include font-black;
+
+    @media (max-width: $screen-tablet) {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
+@mixin headline--small($modifier:default) {
+    display: block;
+    font-size: $headline-small;
+    line-height: $headline-small + 8;
+    color: $darkgray;
+    margin-bottom: 5px;
+    @include font-black;
+
+    @media (max-width: $screen-tablet) {
+        font-size: 20px;
+        line-height: 25px;
+    }
+}
+
+
+//Buttons Mixin
+@mixin btn ($modifier:default) {
+    @include font-black;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 13px;
+    margin: 0 10px;
+    font-size: $font-size-btn;
+    line-height: $font-size-btn;
+    color: $darkgray;
+    border: 1px solid $darkgray;
+    background: $white;
+
+    @media (max-width: $screen-lg-desktop) {
+        font-size: $font-size-btn - 2;
+    }
+
+    @media (max-width: $screen-desktop) {
+        margin: 10px 5px;
+    }
+
+    &:hover {
+        background: $darkgray;
+        color: $white;
+        border: 1px solid $darkgray;
+        text-decoration: none;
+    }
+
+    &:active {
+        background: $darkgray;
+        color: $white;
+        border: 1px solid $darkgray;
+        text-decoration: none;
+    }
+
+    &:focus {
+        background: $darkgray;
+        color: $white;
+        border: 1px solid $darkgray;
+        outline: 0;
+        text-decoration: none;
+    }
+}
