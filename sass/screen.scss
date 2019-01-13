@@ -1,9 +1,19 @@
-@import "compass/reset";
+// ------------------------------------------
+//  Main Scss File with all includes
+// ------------------------------------------
+
+// Import Bootstrap for Sass
+@import "bootstrap/bootstrap-custom";
 @import "_bootstrap-variables";
-@import "bootstrap";
 
-@import "//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+//Import Font-awesome
+@import "font-awesome/fa-typo";
 
-@import "_typo";
-@import "_basics";
-@import "_index";
+//Google fonts
+@import "//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700";
+@import "//fonts.googleapis.com/css?family=Lekton:400,700,400italic";
+
+// Import basics
+//@import "_typo";
+//@import "_basics";
+//@import "_index";
