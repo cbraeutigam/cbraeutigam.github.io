@@ -15,10 +15,10 @@ $(document).ready(function () {
 
     $(window).on('scroll', function (event) {
         var scrollValue = $(window).scrollTop();
-        if (scrollValue > $('.dta__header').height()) {
-            $('.dta__header').addClass('affix');
+        if (scrollValue > $('.cb__header').height()) {
+            $('.cb__header').addClass('affix');
         } else{
-            $('.dta__header').removeClass('affix');
+            $('.cb__header').removeClass('affix');
         }
     });
     

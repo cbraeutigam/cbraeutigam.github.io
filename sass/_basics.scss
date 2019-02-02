@@ -1,19 +1,18 @@
 //Colors
 $white: #ffffff;
 $black: #000000;
-$darkgray: #6c676b;
-$lightgray: #f5f5f5;
-$red: #fc0019;
-$darkred: #c80000;
+$textcolor: #111111;
+$gray: #787878;
 
 //Font-sizes
-$font-size-base: 21px;
+$font-size-base: 14px;
 $font-size-nav: 18px;
 $font-size-btn: 20px;
 
-$headline-large: 45px;
-$headline-medium: 40px;
-$headline-small: 25px;
+$headline-large: 24px;
+$headline-medium: 22px;
+$headline-small: 18px;
+$headline-xsmall: 16px;
 
 
 .copy {
@@ -28,14 +27,13 @@ $headline-small: 25px;
     display: block;
     font-size: $headline-large;
     line-height: $headline-large + 8;
-    color: $white;
-    @include font-black;
+    color: $textcolor;
+    @include LektonRegular;
 
 
     @media (max-width: $screen-tablet) {
         font-size: 35px;
         line-height: 40px;
-        color: $darkgray;
     }
 }
 
@@ -43,9 +41,9 @@ $headline-small: 25px;
     display: block;
     font-size: $headline-medium;
     line-height: $headline-medium + 8;
-    color: $darkgray;
+    color: $textcolor;
     margin-bottom: 35px;
-    @include font-black;
+    @include LektonRegular;
 
     @media (max-width: $screen-tablet) {
         font-size: 30px;
@@ -57,14 +55,37 @@ $headline-small: 25px;
     display: block;
     font-size: $headline-small;
     line-height: $headline-small + 8;
-    color: $darkgray;
+    color: $textcolor;
     margin-bottom: 5px;
-    @include font-black;
+    @include LektonRegular;
 
     @media (max-width: $screen-tablet) {
         font-size: 20px;
         line-height: 25px;
     }
+}
+
+@mixin headline--xsmall($modifier:default) {
+    display: block;
+    font-size: $headline-xsmall;
+    line-height: $headline-xsmall + 8;
+    color: $textcolor;
+    margin-bottom: 5px;
+    @include LektonRegular;
+
+    @media (max-width: $screen-tablet) {
+        font-size: 20px;
+        line-height: 25px;
+    }
+}
+
+
+@mixin link($fontsize, $lineheight, $color, $font) {
+    display: block;
+    font-size: $fontsize;
+    line-height: $lineheight;
+    color: $color;
+    @include font;
 }
 
 

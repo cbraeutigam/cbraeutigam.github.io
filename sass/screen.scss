@@ -9,11 +9,10 @@
 //Import Font-awesome
 @import "font-awesome/fa-typo";
 
-//Google fonts
-@import "//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700";
-@import "//fonts.googleapis.com/css?family=Lekton:400,700,400italic";
-
 // Import basics
-//@import "_typo";
+@import "_typo";
+@import "_basics";
+@import "_animate";
+@import "_index";
 //@import "_basics";
 //@import "_index";

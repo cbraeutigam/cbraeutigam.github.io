@@ -15,11 +15,13 @@
 
     <!-- Loader Style -->
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/loader-3.css">
+    <!--    <link rel="stylesheet" href="css/loader-3.css">-->
 
     <!-- Costum Styles -->
+    <!--
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
+-->
 
 
 
@@ -28,39 +30,31 @@
 </head>
 
 <body>
-<!-- Preloader -->
-<div class="cover"></div>
+    <!-- Preloader -->
+    <div class="cover"></div>
 
-<div class="header">
-    <div class="container">
-
-
-
-
-<nav class="navbar navbar-expand-lg">
-    <div class="logo">
-        <a href="index.html">
-            <img src="img/logo.png" alt="Logo">
+    <div class="cb__header">
+        <div class="container">
+            <nav class="cb__nav navbar navbar-expand-lg">
+                <div class="cb__header__logo">
+                    <a class="cb__header__link" href="index.html">
+            <img class="img-responsive" src="img/logo.png" alt="Logo" />
         </a>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" href="#">Portfolio</a>
-            <a class="nav-item nav-link" href="#">About</a>
-            <a class="nav-item nav-link" href="#">Contact</a>
+                </div>
+                <button class="cb__nav__toggle navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fas fa-bars"></span>
+          </button>
+                <div class="cb__nav__collapse collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a class="cb__nav__link" href="#">Portfolio</a>
+                        <a class="cb__nav__link" href="#">About</a>
+                        <a class="cb__nav__link" href="#">Contact</a>
+                    </div>
+                </div>
+            </nav>
         </div>
     </div>
-</nav>
 
-
-
-
-
-    </div>
-</div>
 
     <div class="container">
         <div class="header-page ef-parallax-bg" style="background-image:url(img/portfolio-header.jpg)">
@@ -165,40 +159,61 @@
         </div>
     </div>
 
-    <div class="footer margin-top">
+    <div class="cb__footer margin-top">
         <div class="container">
             <div class="row">
                 <div class="col-md-2 col-sm-4 col-xs-12">
-                    <div class="footer-inner">
-                        <div class="footer-content">
-                            <h4>CONTACT INFO</h4>
-                            <p>
+                    <div class="cb__footer-inner">
+                        <div class="cb__footer-content">
+                            <h4 class="cb__footer__headline">CONTACT INFO</h4>
+                            <p class="cb__footer__para">
                                 T:003 124 115
                                 <br> E:info@mail.com
                                 <br> W:www.website.com
                             </p>
+                            <ul class="cb__some">
+                                <li class="cb__some__item">
+                                    <a class="cb__some__link "href="#">
+                                        <span class="fab fa-xing-square"></span>
+                                    </a>
+                                </li>
+                                <li class="cb__some__item">
+                                    <a class="cb__some__link" href="#">
+                                        <span class="fab fa-linkedin"></span>
+                                    </a>
+                                </li>
+                                   <li class="cb__some__item">
+                                    <a class="cb__some__link" href="#">
+                                        <span class="fab fa-github-square"></span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="footer-inner">
-                        <div class="footer-content">
-                            <ul class="social-media">
-                                <li><a href="#"><i class="iconmoon-facebook"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-twitter"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-flickr2"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-dribbble3"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-pinterest"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-linkedin2"></i></a></li>
-                            </ul>
-                            <span class="copyright-mark">&copy; 2015 OAK, ALL RIGHTS RESERVED</span>
+                    <div class="cb__footer-inner">
+                        <div class="cb__footer-content">
+                            
+                            
                         </div>
                     </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <p class="cb__copyright">
+                                <span class="copy"></span>2019 Claudia Bräutigam |
+                        <a class="cb__copyright__link" href="">Impressum & Datenschutz</a>
+                            </p>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+
 
     <a href="javascript:void(0)" class="scroll-top" id="scroll-top"><i class="pe-7s-angle-up"></i></a>
 
