@@ -1,0 +1,105 @@
+//Header + Nav
+.cb__header {
+    width: 100%;
+    background: #fff;
+    z-index: 9;
+    position: relative;
+
+    &.affix {
+        position: fixed;
+        top: 0;
+        left: 0;
+        -webkit-box-shadow: 0px 9px 18px 1px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 9px 18px 1px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 9px 18px 1px rgba(0, 0, 0, 0.5);
+        animation: smoothScroll 1s forwards;
+    }
+}
+
+@keyframes smoothScroll {
+    0% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.cb__header__logo {
+    float: left;
+    line-height: 100px;
+
+    .affix & {
+        line-height: 40px;
+    }
+}
+
+.cb__nav {
+    padding: 0;
+}
+
+.cb__nav__link {
+    position: relative;
+    color: $textcolor;
+    font-size: 18px;
+    line-height: 22px;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include LektonBold;
+    padding: 15px 0 5px;
+    margin: 0 10px;
+
+    .affix & {
+        padding: 5px;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: $textcolor;
+    }
+    &:before {
+        opacity: 0;
+        transform: translateY(- 8px);
+        transition: transform 0s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity 0s;
+    }
+    &:after {
+        opacity: 0;
+        transform: translateY(8px/2);
+        transition: transform .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity .2s;
+    }
+    &:hover,
+    &:focus {
+        &:before,
+        &:after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        &:before {
+            transition: transform .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity .2s;
+        }
+        &:after {
+            transition: transform 0s .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity 0s .2s;
+        }
+    }
+}
+
+.cb__nav__toggle {
+    border: 1px solid $textcolor;
+    margin-right: 30px;
+
+    &:focus {
+        color: $textcolor;
+        outline: 0;
+    }
+}

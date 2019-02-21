@@ -33,7 +33,7 @@ $(document).ready(function () {
 
     //Finished loader
     Pace.on("done", function() {
-        $(".cover").addClass('animated fadeOutRight').fadeOut(1000);
+        $(".cb__cover").addClass('animated fadeOutRight').fadeOut(1000);
     });
 
     //Scroll Top

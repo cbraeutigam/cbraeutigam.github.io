@@ -15,7 +15,6 @@
 
     <!-- Loader Style -->
     <link rel="stylesheet" href="css/animate.css">
-    <!--    <link rel="stylesheet" href="css/loader-3.css">-->
 
     <!-- Costum Styles -->
     <!--
@@ -24,14 +23,13 @@
 -->
 
 
-
     <!-- Modernizer & Respond js -->
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 
 <body>
     <!-- Preloader -->
-    <div class="cover"></div>
+    <div class="cb__cover"></div>
 
     <div class="cb__header">
         <div class="container">
@@ -57,14 +55,16 @@
 
 
     <div class="container">
-        <div class="header-page ef-parallax-bg" style="background-image:url(img/portfolio-header.jpg)">
-            <div class="col-md-6 col-md-offset-6">
+        <div class="cb__heroheader" style="background-image:url(img/portfolio-header.jpg)">
+            <div class="col-md-6">
                 <div class="row">
-                    <div class="inner-content">
-                        <div class="header-content">
-                            <h1>Portfolio</h1>
-                            <hr>
-                            <p>Everything created in simple way</p>
+                    <div class="cb__heroheader__inner">
+                        <div class="cb__heroheader__content">
+                            <h1 class="cb__headline__section cb__heroheader__headline">Portfolio</h1>
+                            <hr class="cb__divider__section">
+                            <p class="cb__para__section cb__heroheader__para">
+                                Everything created in simple way
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -73,47 +73,49 @@
     </div>
 
 
-    <div class="container margin-top">
-        <div class="history-wrapper">
-            <div class="col-md-6 wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.5s">
-                <div class="row">
-                    <article>
-                        <h1>HISTORY OF AGENCY</h1>
-                        <hr>
-                        <h4>WHO LOVES OR PURSUES OR DESIRES TO OBTAIN PAIN OF ITSELF, BUT BECAUSE OCCASIONALLY CIRCUMSTANCES OCCUR AND PAIN CAN PROCURE HIM SOME GREAT PLEASURE</h4>
-                        <p>
-                            <br/>Porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi modi tempora incidunt ut labore.</p>
-                    </article>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col cb__about__content wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.5s">
+
+                <h2 class="cb__headline__section">About</h2>
+                <hr class="cb__divider__section">
+                <p class="cb__para__section">
+                    Porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi modi tempora incidunt ut labore.
+                </p>
+                <p class="cb__para__section">
+                    Porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi modi tempora incidunt ut labore.
+                </p>
             </div>
-            <div class="col-md-5 col-md-offset-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                <div class="row">
-
-                    <img class="img-responsive center-block" src="img/about_img.jpg" alt="About">
-
-                </div>
+            <div class="col cb__about__image wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                <img class="img-responsive" src="img/about.png" alt="About">
             </div>
         </div>
     </div>
 
 
 
-    <div class="container margin-top">
-        <div class="portfolio-wrapper">
-            <div class="main-title">
-                <h1>OUR WORK</h1>
-                <hr>
-                <h6>Laborious to obtain some advantage from it</h6>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="cb__headline__section">Portfolio</h2>
+                <hr class="cb__divider__section">
+                <p class="cb__para__section">
+                    Hier kommt ein Text hin
+                </p>
             </div>
+        </div>
+    </div>
 
+    <div class="container js-masonry">
 
-
-            <div class="js-masonry">
-                <div class="row" id="work-grid">
+        <div class="row" id="work-grid">
+            <div class="cb__porfolio__wrapper col-md-12">
+                <div class="row">
                     <!-- Begin of Thumbs Portfolio -->
-                    <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="col">
                         <div class="img home-portfolio-image">
-                            <img src="img/home-portfolio/img_1.jpg" alt="Portfolio Item">
+                            <img src="http://lorempixel.com/300/400/nature/" alt="Portfolio Item">
+                            <!--                                <img src="img/home-portfolio/img_1.jpg" alt="Portfolio Item">-->
                             <div class="overlay-thumb">
                                 <div class="details">
                                     <span class="title">STYLE FASHION</span>
@@ -125,9 +127,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="col">
                         <div class="img home-portfolio-image">
-                            <img src="img/home-portfolio/img_1.jpg" alt="Portfolio Item">
+                            <img src="http://lorempixel.com/300/400/nature/" alt="Portfolio Item">
                             <div class="overlay-thumb">
                                 <div class="details">
                                     <span class="title">STYLE FASHION</span>
@@ -139,9 +141,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="col">
                         <div class="img home-portfolio-image">
-                            <img src="img/home-portfolio/img_1.jpg" alt="Portfolio Item">
+                            <img src="http://lorempixel.com/300/400/nature/" alt="Portfolio Item">
+                            <div class="overlay-thumb">
+                                <div class="details">
+                                    <span class="title">STYLE FASHION</span>
+                                    <span class="info">NEW BAG & STYLE FASHION</span>
+                                </div>
+                                <span class="btnBefore"></span>
+                                <span class="btnAfter"></span>
+                                <a class="main-portfolio-link" href="single-project.html"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="img home-portfolio-image">
+                            <img src="http://lorempixel.com/300/400/nature/" alt="Portfolio Item">
                             <div class="overlay-thumb">
                                 <div class="details">
                                     <span class="title">STYLE FASHION</span>
@@ -155,35 +171,33 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
-    <div class="cb__footer margin-top">
+    <div class="cb__footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-2 col-sm-4 col-xs-12">
+                <div class="col">
                     <div class="cb__footer-inner">
                         <div class="cb__footer-content">
-                            <h4 class="cb__footer__headline">CONTACT INFO</h4>
+                            <h4 class="cb__headline__section cb__footer__headline">CONTACT</h4>
                             <p class="cb__footer__para">
-                                T:003 124 115
-                                <br> E:info@mail.com
-                                <br> W:www.website.com
+                                T: 0178 4520046
+                                <br> E: claudia.braeutigam@freenet.de
                             </p>
                             <ul class="cb__some">
                                 <li class="cb__some__item">
-                                    <a class="cb__some__link "href="#">
+                                    <a class="cb__some__link" target="_blank" href="https://www.xing.com/profile/Claudia_Braeutigam">
                                         <span class="fab fa-xing-square"></span>
                                     </a>
                                 </li>
                                 <li class="cb__some__item">
-                                    <a class="cb__some__link" href="#">
+                                    <a class="cb__some__link" target="_blank" href="https://www.linkedin.com/in/claudia-br%C3%A4utigam-14849294/">
                                         <span class="fab fa-linkedin"></span>
                                     </a>
                                 </li>
-                                   <li class="cb__some__item">
-                                    <a class="cb__some__link" href="#">
+                                <li class="cb__some__item">
+                                    <a class="cb__some__link" target="_blank" href="https://github.com/cbraeutigam">
                                         <span class="fab fa-github-square"></span>
                                     </a>
                                 </li>
@@ -191,20 +205,11 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="cb__footer-inner">
-                        <div class="cb__footer-content">
-                            
-                            
-                        </div>
-                    </div>
-                </div>
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <p class="cb__copyright">
-                                <span class="copy"></span>2019 Claudia Bräutigam |
+                        <span class="copy"></span>2019 Claudia Bräutigam |
                         <a class="cb__copyright__link" href="">Impressum & Datenschutz</a>
-                            </p>
+                    </p>
                 </div>
             </div>
         </div>
@@ -214,8 +219,9 @@
 
 
 
-
-    <a href="javascript:void(0)" class="scroll-top" id="scroll-top"><i class="pe-7s-angle-up"></i></a>
+    <a href="javascript:void(0)" class="cb__scroll-top" id="scroll-top">
+        <span class="fa fa-chevron-up"></span>
+    </a>
 
 
 
