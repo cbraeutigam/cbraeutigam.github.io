@@ -1,52 +1,27 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html lang="de">
 
 <head>
     <meta charset="utf-8">
-    <title>OAK - HTML Theme</title>
+    <title>Titel</title>
     <meta name="description" content="">
+    <meta name="author" content="bievent">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="msapplication-tap-highlight" content="yes" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
 
-    <!-- Google Web Font -->
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lekton:400,700,400italic' rel='stylesheet' type='text/css'>
-
-    <!--  Bootstrap 3-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- OWL Carousel -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
-
-    <!--  Slider -->
-    <link rel="stylesheet" href="css/jquery.kenburnsy.css">
-
-    <!-- Animate -->
-    <link rel="stylesheet" href="css/animate.css">
-
-    <!-- Web Icons Font -->
-    <link rel="stylesheet" href="css/pe-icon-7-stroke.css">
-    <link rel="stylesheet" href="css/iconmoon.css">
-    <link rel="stylesheet" href="css/et-line.css">
-    <link rel="stylesheet" href="css/ionicons.css">
-
-    <!-- Magnific PopUp -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <!-- Tabs -->
-    <link rel="stylesheet" type="text/css" href="css/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="css/tabstyles.css" />
+    <link media="screen" rel="stylesheet" type="text/css" href="css/screen.css" />
 
     <!-- Loader Style -->
-    <link rel="stylesheet" href="css/loader-1.css">
+    <link rel="stylesheet" href="css/animate.css">
 
     <!-- Costum Styles -->
+    <!--
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
+-->
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/ico" href="favicon.ico">
 
     <!-- Modernizer & Respond js -->
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -55,237 +30,225 @@
 <body>
 
     <!-- Preloader -->
-    <div class="cover"></div>
+    <div class="cb__cover"></div>
 
-    <div class="header">
+    <div class="cb__header">
         <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/logo.png" alt="Logo">
-                </a>
-            </div>
-
-            <!-- Menu Hamburger (Default) -->
-            <button class="main-menu-indicator" id="open-button">
-                <span class="line"></span>
-            </button>
-
-            <div class="menu-wrap" style="background-image: url(img/nav_bg.jpg)">
-                <div class="menu-content">
-                    <div class="navigation">
-                        <span class="pe-7s-close close-menu" id="close-button"></span>
-                        <div class="search-wrap js-ui-search">
-                            <input class="js-ui-text" type="text" placeholder="Search Here...">
-                            <span class="eks js-ui-close"></span>
-                        </div>
-                    </div>
-                    <nav class="menu">
-                        <div class="menu-list">
-                            <ul>
-                                <li class="menu-item-has-children"><a href="#">Home</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">- Default</a></li>
-                                        <li><a href="index-architecture.html">- Architecture</a></li>
-                                        <li><a href="index-full-slider.html">- Slider Full Width</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about.html">About</a></li>
-                                <li class="menu-item-has-children"><a href="#">Portfolio</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="portfolio-2column.html">-Portfolio 2 Column</a></li>
-                                        <li><a href="portfolio-3column.html">-Portfolio 3 Column</a></li>
-                                        <li><a href="portfolio-masonry.html">-Portfolio Masonry</a></li>
-                                        <li><a href="portfolio-dribbble.html">-Portfolio Dribbble</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children"><a href="#">Blog</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="blog.html">Blog Default</a></li>
-                                        <li><a href="blog-timeline.html">Blog Timeline</a></li>
-                                        <li><a href="single-blog.html">Blog Single</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-
-                    <div class="hidden-xs">
-                        <div class="menu-social-media">
-                            <ul>
-                                <li><a href="#"><i class="iconmoon-facebook"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-twitter"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-dribbble3"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-pinterest"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-linkedin2"></i></a></li>
-                            </ul>
-                        </div>
-
-                        <div class="menu-information">
-                            <ul>
-                                <li><span>T:</span> 003 124 115</li>
-                                <li><span>E:</span> info@mail.com</li>
-                            </ul>
-                        </div>
+            <nav class="cb__nav navbar navbar-expand-lg">
+                <div class="cb__header__logo">
+                    <a class="cb__header__link" href="index.html">
+            <img class="img-responsive" src="img/logo.png" alt="Logo" />
+        </a>
+                </div>
+                <button class="cb__nav__toggle navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fas fa-bars"></span>
+          </button>
+                <div class="cb__nav__collapse collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a class="cb__nav__link" href="#">Portfolio</a>
+                        <a class="cb__nav__link" href="#">About</a>
+                        <a class="cb__nav__link" href="#">Contact</a>
                     </div>
                 </div>
-            </div>
-            <!-- End of Menu Hamburger (Default) -->
+            </nav>
+        </div>
+    </div>
 
-        </div>
-    </div>
-    <div class="container">
-        <div class="portfolio-controls">
-            <div class="btn-project home-btn">
-                <a href="#" data-hover="Home">
-                    <i class="pe-7s-keypad"></i>
-                </a>
-            </div>
-            <div class="btn-project forward-btn">
-                <a href="#" data-hover="Next">
-                    <i class="pe-7s-angle-right right"></i>
-                </a>
-            </div>
-            <div class="btn-project back-btn">
-                <a href="#" data-hover="Previous">
-                    <i class="pe-7s-angle-left left"></i>
-                </a>
-            </div>
-        </div>
-    </div>
+
+<div class="block -berry edge--bottom">
+  <h1>Bottom Angled Edge</h1>
+</div>
+
+
+<!--<div class="container">-->
+    <!--<div class="portfolio-controls">-->
+        <!--<div class="btn-project home-btn">-->
+            <!--<a href="#" data-hover="Home">-->
+                <!--<i class="pe-7s-keypad"></i>-->
+            <!--</a>-->
+        <!--</div>-->
+        <!--<div class="btn-project forward-btn">-->
+            <!--<a href="#" data-hover="Next">-->
+                <!--<i class="pe-7s-angle-right right"></i>-->
+            <!--</a>-->
+        <!--</div>-->
+        <!--<div class="btn-project back-btn">-->
+            <!--<a href="#" data-hover="Previous">-->
+                <!--<i class="pe-7s-angle-left left"></i>-->
+            <!--</a>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<!--<div class="container">-->
+    <!--<div class="single-project-details">-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-12">-->
+                <!--<div class="single-project-images">-->
+                    <!--<img src="img/single-project/img_3b.jpg" alt="Single Project">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
 <div class="container">
-        <div class="single-project-details">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="single-project-images">
-                        <img src="img/single-project/img_3b.jpg" alt="Single Project">
-                    </div>
+    <div class="single-portfolio-wrapper">
+        <div class="row">
+            <div class="col-md-8 col-sm-8">
+                <h1>STYLE FASHION</h1>
+                <span class="info">NEW BAG & STYLE FASHION</span>
+                <p>Idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure.Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a because it is pain, but because occasionally circumstances occur in which toil and pain can procure trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage.</p>
+            </div>
+            <div class="col-md-3 col-md-offset-1 col-sm-4">
+                <div class="project-information">
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <td>Date:</td>
+                            <td>01.09.2015</td>
+                        </tr>
+                        <tr>
+                            <td>Client:</td>
+                            <td>Envato</td>
+                        </tr>
+                        <tr>
+                            <td>Category:</td>
+                            <td>Fashion Design</td>
+                        </tr>
+                        <tr>
+                            <td>Visit:</td>
+                            <td><a href="http://www.envato.com" target="_blank">envato.com</a></td>
+                        </tr>
+                        <tr>
+                            <td>Share:</td>
+                            <td>
+                                <ul class="social-buttons">
+                                    <li><a href="javasript:void(0);" data-social="fb"><i class="iconmoon-facebook"></i></a></li>
+                                    <li>
+                                        <a href="javascript:void(0);" data-social="tw"> <i class="iconmoon-twitter"></i></a>
+                                    </li>
+                                    <li><a href="javascript:void(0);" data-social="pt"><i class="iconmoon-pinterest"></i></a></li>
+                                    <li><a href="javascript:void(0);" data-social="ln"><i class="iconmoon-linkedin"></i></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="single-portfolio-wrapper">
-            <div class="row">
-                <div class="col-md-8 col-sm-8">
-                    <h1>STYLE FASHION</h1>
-                    <span class="info">NEW BAG & STYLE FASHION</span>
-                    <p>Idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure.Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a because it is pain, but because occasionally circumstances occur in which toil and pain can procure trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage.</p>
-                </div>
-                <div class="col-md-3 col-md-offset-1 col-sm-4">
-                    <div class="project-information">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td>Date:</td>
-                                    <td>01.09.2015</td>
-                                </tr>
-                                <tr>
-                                    <td>Client:</td>
-                                    <td>Envato</td>
-                                </tr>
-                                <tr>
-                                    <td>Category:</td>
-                                    <td>Fashion Design</td>
-                                </tr>
-                                <tr>
-                                    <td>Visit:</td>
-                                    <td><a href="http://www.envato.com" target="_blank">envato.com</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Share:</td>
-                                    <td>
-                                        <ul class="social-buttons">
-                                            <li><a href="javasript:void(0);" data-social="fb"><i class="iconmoon-facebook"></i></a></li>
-                                            <li>
-                                                <a href="javascript:void(0);" data-social="tw"> <i class="iconmoon-twitter"></i></a>
-                                            </li>
-                                            <li><a href="javascript:void(0);" data-social="pt"><i class="iconmoon-pinterest"></i></a></li>
-                                            <li><a href="javascript:void(0);" data-social="ln"><i class="iconmoon-linkedin"></i></a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="single-project-details">
-            <div class="row">
-                <div class="col-md-6 col-sm-6">
-                    <div class="single-project-images">
-                        <img src="img/single-project/img_1b.jpg" alt="Single Project">
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="single-project-images">
-                        <img src="img/single-project/img_2b.jpg" alt="Single Project">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
+</div>
+<div class="container">
+    <div class="single-project-details">
+        <!--<div class="row">-->
 
 
-<div class="footer margin-top">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="0">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="img/image_1.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/image_1.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/image_1.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+            <!--<div class="col-md-6 col-sm-6">-->
+                <!--<div class="single-project-images">-->
+                    <!--<img src="img/single-project/img_1b.jpg" alt="Single Project">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-md-6 col-sm-6">-->
+                <!--<div class="single-project-images">-->
+                    <!--<img src="img/single-project/img_2b.jpg" alt="Single Project">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>
+
+
+
+<div class="cb__footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-2 col-sm-4 col-xs-12">
-                    <div class="footer-inner">
-                        <div class="footer-content">
-                 <h4>CONTACT INFO</h4>
-                            <p>
-                                T:003 124 115
-                                <br> E:info@mail.com
-                                <br> W:www.website.com
+                <div class="col">
+                    <div class="cb__footer-inner">
+                        <div class="cb__footer-content">
+                            <h4 class="cb__headline__section cb__footer__headline">CONTACT</h4>
+                            <p class="cb__footer__para">
+                                T: 0178 4520046
+                                <br> E: claudia.braeutigam@freenet.de
                             </p>
+                            <ul class="cb__some">
+                                <li class="cb__some__item">
+                                    <a class="cb__some__link" target="_blank" href="https://www.xing.com/profile/Claudia_Braeutigam">
+                                        <span class="fab fa-xing-square"></span>
+                                    </a>
+                                </li>
+                                <li class="cb__some__item">
+                                    <a class="cb__some__link" target="_blank" href="https://www.linkedin.com/in/claudia-br%C3%A4utigam-14849294/">
+                                        <span class="fab fa-linkedin"></span>
+                                    </a>
+                                </li>
+                                <li class="cb__some__item">
+                                    <a class="cb__some__link" target="_blank" href="https://github.com/cbraeutigam">
+                                        <span class="fab fa-github-square"></span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="footer-inner">
-                        <div class="footer-content">
-                            <ul class="social-media">
-                                <li><a href="#"><i class="iconmoon-facebook"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-twitter"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-flickr2"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-dribbble3"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-pinterest"></i></a></li>
-                                <li><a href="#"><i class="iconmoon-linkedin2"></i></a></li>
-                            </ul>
-                            <span class="copyright-mark">&copy; 2015 OAK, ALL RIGHTS RESERVED</span>
-                        </div>
-                    </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <p class="cb__copyright">
+                        <span class="copy"></span>2019 Claudia Bräutigam |
+                        <a class="cb__copyright__link" href="">Impressum & Datenschutz</a>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <a href="javascript:void(0)" class="scroll-top" id="scroll-top"><i class="pe-7s-angle-up"></i></a>
 
-    <script src="js/vendor/jquery-1.11.2.min.js"></script>
-    <script data-pace-options='{ "ajax": false }' src="js/vendor/pace.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/vendor/classie.js"></script>
-    <script src="js/vendor/isotope.pkgd.min.js"></script>
-    <script src="js/vendor/jquery.velocity.min.js"></script>
-    <script src="js/vendor/jquery.kenburnsy.min.js"></script>
-    <script src="js/vendor/textslide.js"></script>
-    <script src="js/vendor/imagesloaded.pkgd.min.js"></script>
-    <script src="js/vendor/tabs.js"></script>
-    <script src="js/ef-slider.js"></script>
-    <script src="js/vendor/owl.carousel.min.js"></script>
-    <script src="js/vendor/jquery.magnific-popup.min.js"></script>
-    <script src="js/vendor/jquery.social-buttons.min.js"></script>
-    <script src="js/vendor/wow.min.js"></script>
+
+
+    <a href="javascript:void(0)" class="cb__scroll-top" id="scroll-top">
+        <span class="fa fa-chevron-up"></span>
+    </a>
+
+    <script type="text/javascript" src="js/libs/jquery.3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/libs/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/libs/bootstrap.bundle.min.js"></script>
+    <script data-pace-options='{ "ajax": false }' src="js/libs/pace.min.js"></script>
+    <script src="js/libs/wow.min.js"></script>
+
     <script src="js/main.js"></script>
-    <script src="js/ajax.js"></script>
 </body>
 
 </html>
