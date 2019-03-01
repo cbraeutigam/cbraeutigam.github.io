@@ -3,11 +3,16 @@
 // ------------------------------------------
 
 // Import Bootstrap for Sass
-@import "bootstrap/bootstrap-custom";
 @import "_bootstrap-variables";
+@import "bootstrap/bootstrap-custom";
 
-//Import Font-awesome
+//Import Icon-Fonts
 @import "font-awesome/fa-typo";
+@import "pe-iconfont";
+
+//Import third party css
+@import url(/css/owl.carousel.css);
+@import url(/css/owl.theme.css);
 
 // Import basics
 @import "_typo";

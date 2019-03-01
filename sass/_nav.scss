@@ -1,3 +1,34 @@
+.cb__header__small {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 20rem;
+    z-index: 999;
+    background-color: $beanreddark;
+    text-align: center;
+    box-shadow: 0 7px 20px 0 rgba(0,0,0,0.2), 0 4px 10px 0 rgba(0,0,0,0.2);
+
+    ul {
+            list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+        li {
+            padding:0 0 5px;
+        }
+    }
+}
+
+
+
+
+
 //Header + Nav
 .cb__header {
     width: 100%;

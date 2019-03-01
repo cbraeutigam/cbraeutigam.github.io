@@ -1,136 +1,149 @@
-// mixin
-@mixin angle($pseudo, $flip: false, $angle: 1.5deg) {
-  // Possible values for $pseudo are: before, after, both
-  @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
-    position: relative;
-    z-index: 1;
-    $selector: if($pseudo == 'both', '&:before,&:after', '&:#{$pseudo}');
+//-------------------------------------------------------------- */
+/* =Style for single page
+//-------------------------------------------------------------- */
 
-    #{$selector} {
-      background: inherit;
-      content: '';
-      display: block;
-      height: 50%;
-      left: 0;
-      position: absolute;
-      right: 0;
-      z-index: -1;
-      -webkit-backface-visibility: hidden; // for Chrome Windows
+.cb__single__content {
+  margin-bottom: 25px;
+}
+
+
+.cb__single__info__inner {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 auto auto;
+}
+
+
+.cb__single__info__headline {
+  @include UbuntuBold;
+  font-size: 14px;
+  line-height: 18px;
+  margin:0;
+}
+
+
+.cb__single__info__para {
+  @include UbuntuLight;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 0;
+}
+
+
+
+/* =Controls
+-------------------------------------------------------------- */
+.cb__single__controls {
+  margin-bottom: 50px;
+}
+
+.cb__single__btn {
+  width: 100px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  border: 1px solid $lightgray;
+  font-size: 24px;
+
+  &.home {
+    float: left;
+  }
+
+  &.back,
+  &.forward {
+    float: right;
+    margin-left: 8px;
+  }
+}
+
+
+.cb__single__btn__link {
+  background: transparent;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  color: $textcolor;
+
+  &:before {
+    content: attr(data-hover);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    opacity: 0;
+    transform: translate(100%, 0);
+    transition: all .3s ease-in-out;
+    font-size: 10px;
+    background: $primary;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    &:before {
+      opacity: 1;
+      transform: translate(0, 0);
+      color: #111;
+      font-weight: 100;
     }
 
-    @if $pseudo == 'before' {
-      #{$selector} {
-        top: 0;
-
-        @if $flip {
-          transform: skewY($angle * -1);
-          transform-origin: 0 0;
-        } @else {
-          transform: skewY($angle);
-          transform-origin: 100% 0;
-        }
-      }
-    }
-
-    @if $pseudo == 'after' {
-      #{$selector} {
-        bottom: 0;
-
-        @if $flip {
-          transform: skewY($angle);
-          transform-origin: 0 100%;
-        } @else {
-          transform: skewY($angle * -1);
-          transform-origin: 100%;
-        }
-      }
-    }
-
-    @if $pseudo == 'both' {
-      &:before {
-        top: 0;
-
-        @if $flip {
-          transform: skewY($angle * -1);
-          transform-origin: 0 0;
-        } @else {
-          transform: skewY($angle);
-          transform-origin: 100% 0;
-        }
-      }
-
-      &:after {
-        bottom: 0;
-
-        @if $flip {
-          transform: skewY($angle);
-          transform-origin: 0 0;
-        } @else {
-          transform: skewY($angle * -1);
-          transform-origin: 100%;
-        }
-      }
+    .cb__single__btn__icon {
+      opacity: 0;
+      transform: translate(100%, 0);
     }
   }
 }
 
-// slanted edges here
-.edge--bottom {
-  @include angle(after);
+.cb__single__btn__icon {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: .8em;
+  transition: all .3s ease-in-out;
 }
 
-.edge--bottom--reverse {
-  @include angle(after, true);
+
+/* =Slider
+-------------------------------------------------------------- */
+
+.cb__single__slider {
+  position: relative;
 }
 
-.edge--top {
-  @include angle(before);
-}
-
-.edge--top--reverse {
-  @include angle(before, true);
-}
-
-.edge--both {
-  @include angle(both);
-}
-
-.edge--both--reverse {
-  @include angle(both, true);
-}
-
-.-berry {
-  background: #b52b4a;
-}
-
-.-blue {
-  background: #41ade5
-}
-
-.-orange {
-  background: #de6628;
-}
-
-.-green {
-  background: #5e9b42;
-}
-
-// demo code below
-.block {
+.cb__single__slider__control__inner {
+  position: absolute;
+  top: calc(50% - 24px);
   color: #fff;
-  font-family: 'Fira Sans', sans-serif;
-  margin: 0 0 200px;
-  padding: 7% 20px;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 30px;
   text-align: center;
+
+  &.left {
+    left: 20px;
+  }
+
+  &.right {
+    right: 20px;
+  }
 }
 
-h1 {
-  font-size: 32px;
-  font-weight: 500;
-}
+.cb__single__slider__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  color: #111111;
+  border: 1px solid #fff;
 
-p {
-  font-size: 14px;
-  font-weight: 300;
-  margin-top: 0.5em;
+  &:hover {
+    color: #fff;
+    background: $primary;
+    border: 1px solid $primary;
+  }
 }

@@ -1,17 +1,10 @@
-"use strict";
-
-
 $(document).ready(function () {
-
-
 
     var scrollSection = function (hash) {
         $('html,body').animate({
             scrollTop: $(hash).offset().top - 80
         }, 1500, 'easeInOutExpo');
     };
-
-
 
     $(window).on('scroll', function (event) {
         var scrollValue = $(window).scrollTop();
@@ -21,14 +14,6 @@ $(document).ready(function () {
             $('.cb__header').removeClass('affix');
         }
     });
-    
-    
-     //Parallax Background on Desktop
-    if (!isMobile.any()) {
-        $(window).on('scroll', function() {
-            parallaxScroll();
-        });
-    };
 
 
     //Finished loader
@@ -43,10 +28,67 @@ $(document).ready(function () {
     //WOW Animation init 
     new WOW().init();
 
+    //Slider single page
+    var owl = $('.single-slider');
+
+    owl.owlCarousel({
+        singleItem: true,
+        pagination: false,
+        autoPlay: 5000,
+        slideSpeed: 300
+    });
+
+    $('.prev-slide').on('click', function(e) {
+        e.preventDefault();
+        console.log('click prev')
+        owl.trigger('owl.prev');
+    });
+
+    $('.next-slide').on('click', function(e) {
+        e.preventDefault();
+        console.log('click next')
+        owl.trigger('owl.next');
+    });
+
+    $(window).scroll(function() {
+        parallaxFade();
+    });
+
+
+
+    var content;
+
+    $('.cb__portfolio__item__link').on('click', function(e){
+        e.preventDefault();
+        $.get('single-project.html', function(data){
+            content= data;
+            $('#result').prepend(content);
+            $('#result').addClass('fadeInUp');
+            $('#result').addClass('open');
+        });
+    });
+
+ $('.cb__single__closebtn').on('click', function(e){
+      e.preventDefault();
+     $('#result').empty(content);
+      $('#result').removeClass('open');
+ });
+
 
 
 });
 
+
+function parallaxFade() {
+    scrollPos = $(this).scrollTop();
+    $('.cb__heroheader').css({
+        'background-position' : '50% ' + (-scrollPos/4)+"px"
+    });
+    $('.cb__heroheader__headline').css({
+        'margin-top': (scrollPos/4)+"px",
+        'opacity': 1-(scrollPos/100)
+    });
+}
 
 //Scroll Top 
 $.fn.scrollToTop = function() {
@@ -62,74 +104,10 @@ $.fn.scrollToTop = function() {
             $(scrollDiv).fadeIn('slow')
         }
     });
-    $(this).on('click', function() {
+    $(this).on('click', function(e) {
+        e.preventDefault();
         $('html, body').animate({
             scrollTop: 0
         }, 'slow')
     })
 };
-
-//Detect Mobile
-var isMobile = {
-    Android: function() {
-        return navigator.userAgent.match(/Android/i);
-    },
-    BlackBerry: function() {
-        return navigator.userAgent.match(/BlackBerry/i);
-    },
-    iOS: function() {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: function() {
-        return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: function() {
-        return navigator.userAgent.match(/IEMobile/i);
-    },
-    any: function() {
-        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-    }
-};
-
-//Parallax Scroll
-function parallaxScroll() {
-    var scrolledY = $(window).scrollTop();
-    var headerImage = $('.ef-parallax-bg');
-    headerImage.css('background-position', 'center -' + ((scrolledY * 0.4)) + 'px');
-};
-
-
-
-//Window Load
-/*jQuery(window).load(function($) {
-    
-    Init Portfolio
-    var container = jQuery("#work-grid");
-    if (container.length > 0) {
-        container.isotope({
-            layoutMode: 'masonry',
-            transitionDuration: '0.7s',
-            columnWidth: 60
-        });
-    };
-
-    //Filter Portfolio
-    jQuery('a.filter').on('click', function() {
-        var to_filter = jQuery(this).attr('data-filter');
-        if (to_filter == 'all') {
-            container.isotope({
-                filter: '.mix'
-            });
-        } else {
-            container.isotope({
-                filter: '.' + to_filter
-            });
-        }
-    });
-
-    //Switch Classes portfolio
-    jQuery('.filter').on('click', function() {
-        jQuery('a.filter').removeClass('active');
-        jQuery(this).addClass('active');
-    });
-});*/

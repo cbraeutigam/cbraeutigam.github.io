@@ -6,18 +6,20 @@
     //@include box-sizing(border-box);
 }
 
+html {
+    height: 100%;
+}
+
 body {
     @include UbuntuRegular;
-    font-size: $font-size-base;
-    color: $textcolor;
-    background: $white;
+    font-size: 14px;
+    color: $egg;
+    background: $antrazit;
     margin: 0;
     overflow-x: hidden !important;
     -webkit-font-smoothing: antialiased;
-
-    @media (max-width: $screen-tablet) {
-        font-size: 18px;
-    }
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -45,13 +47,13 @@ body {
     cursor: pointer;
     width: 50px;
     height: 50px;
-    background-color: $antrazit;
+    background-color: $redwine;
     text-align: center;
     color: $white;
     z-index: 9;
 
     span {
-        color: $white;
+        color: $egg;
         font-size: 30px;
         position: absolute;
         left: 12px;
@@ -60,15 +62,33 @@ body {
 }
 
 .cb__headline__section {
-    font-size: 40px;
-    line-height: 45px;
+    font-size: 60px;
+    line-height: 70px;
     @include LektonBold;
     text-transform: uppercase;
     margin: 30px 0 0;
+    position: relative;
+    display: inline-block;
+    color: $egg;
+    letter-spacing: 3pt;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        -ms-transform: translateX(110%) translateY(-1.2rem);
+        transform: translateX(110%) translateY(-1.2rem);
+        background-color: $redcherry;
+        height: .25rem;
+        width: 1rem;
+    }
 }
 
 .cb__divider__section {
     float: none;
+    border: 0;
+    border-top: 1px solid $egg;
 }
 
 .cb__para__section {
@@ -81,29 +101,85 @@ body {
 /* =Hero Header
 -------------------------------------------------------------- */
 
+.zack {
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+
+}
+
+
+.cb__heroheaderalt {
+    margin: 0 0 80px;
+    padding: 7% 20px 0;
+    text-align: center;
+    background: #131313;
+}
+
 .cb__heroheader {
     position: relative;
-    min-height: 450px;
-    margin-bottom: 60px;
+    min-height: 90vh;
+    background: url(/img/header2.jpg) no-repeat fixed 50% 0;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    //border-bottom: 5px solid $egg;
+
+
+    svg {
+        position: absolute;
+        top: -300px;
+    }
 }
 
-.cb__heroheader__inner {
-    padding: 25px;
-    background: rgba($lightgray, 0.8);
-    display: flex;
-    height: 410px;
-    width: calc(100% - 40px);
-    margin: 20px 0 20px 20px;
-    align-items: center;
-    justify-content: center;
+.cb__heroheader__container {
+    height: 100%;
+
+    @include media-breakpoint-up(lg) {
+        //max-width: 1500px;
+    }
 }
+
+.cb__heroheader__row {
+    height: 100%;
+}
+
+.cb__heroheader__headline-wrapper {
+    align-self: center;
+}
+
+//.cb__heroheader__inner {
+//    padding: 25px;
+//    background: rgba($lightgray, 0.8);
+//    display: flex;
+//    //height: 410px;
+//    width: calc(100% - 40px);
+//    margin: 20px 0 20px 20px;
+//    align-items: center;
+//    justify-content: center;
+//}
 
 .cb__heroheader__headline {
-    text-align: center;
-    font-size: 60px;
-    line-height: 65px;
-    @include LektonBold;
-    text-transform: uppercase;
+    font-size: 80px;
+    line-height: 63px;
+    @include UbuntuRegular;
+    color: $egg;
+    border-left: 5px solid $dark;
+    padding-left: 25px;
+
+    .dark {
+        color: $dark;
+        @include UnbuntuMedium;
+    }
+
+    .second {
+        @include LektonBold;
+        font-size: 53px;
+        line-height: 72px;
+
+    }
 }
 
 
@@ -115,6 +191,41 @@ body {
 }
 
 
+.cb__about__rect {
+    background: $redwine;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 91px 0 91px 100px;
+        border-color: transparent transparent transparent $redwine;
+        position: absolute;
+        right: -100px;
+    }
+}
+
+.cb__about__banner {
+    background: $redcherry;
+    position: relative;
+    margin-bottom: 40px;
+    padding: 20px 0;
+}
+
+.cb__about__banner__headline-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.cb__about__banner__headline {
+    margin: 0;
+}
+
 /* =Overlay Thumb Portfolio
 -------------------------------------------------------------- */
 
@@ -124,7 +235,7 @@ body {
 }
 
 .cb__porfolio__wrapper {
-    margin-bottom: 60px;
+    margin: 30px 0 60px;
 }
 
 
@@ -133,27 +244,17 @@ body {
     overflow: hidden;
     display: inherit;
     height: 100%;
-
-
-    img {
-        display: block;
-        margin: auto;
-        max-width: 100%;
-        height: auto;
-        transition: opacity 0.35s, -webkit-transform 0.35s;
-        transition: opacity 0.35s, transform 0.35s;
-        -o-transition: opacity 0.35s, -o-transform 0.35s;
-
-        &:hover {
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-            transition: -webkit-transform 3s;
-            transition: transform 0.5s;
-        }
-    }
-
+    background-color: $redcherry;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: hard-light;
+    box-shadow: 0 1px 0 rgba(30, 30, 32, 0.2) inset, 0 8px 16px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 150ms ease-out;
+    min-height: 480px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
-
 
 
 .cb__portfolio__item__link {
@@ -162,7 +263,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 45px;
     z-index: 4;
     cursor: url(../img/cursor.png), auto;
 }
@@ -178,77 +278,87 @@ body {
     transition: all 0.5s ease-out;
     z-index: 4;
 
-    &:hover {
-        background-color: rgba(123, 238, 199, .9);
+
+
+    &:before,
+    &:after {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        bottom: 30px;
+        left: 30px;
+        content: '';
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
     }
 
-    span {
-        position: relative;
-        z-index: 1;
-        line-height: 15px;
-        transition: 0.3s ease;
-        -webkit-transition: 0.3s ease;
-        -moz-transition: 0.3s ease;
-        -o-transition: 0.3s ease;
-        -ms-transition: 0.3s ease;
+
+    &:before {
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        -webkit-transform: scale(0,1);
+        transform: scale(0,1);
+    }
+
+    &:after {
+        border-right: 1px solid #fff;
+        border-left: 1px solid #fff;
+        -webkit-transform: scale(1,0);
+        transform: scale(1,0);
+    }
+
+    &:hover {
+        background-color: rgba($redwine, .9);
+
+        &:before,
+        &:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+
+        }
+
+        .cb__portfolio__item__title {
+            top: 0;
+            transition-delay: 0.15s;
+            opacity: 1;
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+
     }
 }
 
 .cb__portfolio__item__title {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
     display: block;
     opacity: 0;
-    position: relative;
     top: 100px;
     transition-property: top, opacity;
     transition-duration: 0.3s;
     transition-delay: 0s;
-    font-size: 18px;
+    font-size: 28px;
     letter-spacing: 1.2pt;
-    line-height: 24px;
-     color: #111111;
-    text-transform: uppercase;
-    font-weight: 600;
+    line-height: 38px;
+    color: $egg;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,-20px,0);
+    transform: translate3d(0,-20px,0);
 }
 
-.cb__portfolio__item__info {
-    display: block;
-    opacity: 0;
-    position: relative;
-    top: 100px;
-    transition-property: top, opacity;
-    transition-duration: 0.3s;
-    transition-delay: 0s;
-    font-size: 14px;
-     color: #111111;
-    text-transform: uppercase;
-    line-height: 1.2;
-    letter-spacing: 1.5pt;
-    margin-top: 5px;
-}
-
-
-
-.cb__portfolio__item__overlay:hover:before,
-.cb__portfolio__item__overlay:hover span {
-    opacity: 1;
-}
-
-.cb__portfolio__item__overlay:hover .cb__portfolio__item__content span {
-    top: 0;
-}
-
-.cb__portfolio__item__overlay:hover .cb__portfolio__item__title {
-    transition-delay: 0.15s;
-}
-
-.cb__portfolio__item__overlay:hover .cb__portfolio__item__info {
-    transition-delay: 0.25s;
-}
-
-/*Details on portfolio*/
 
 .cb__portfolio__item__content {
-    padding: 20px;
+    padding: 40px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -256,53 +366,31 @@ body {
 }
 
 
+#result {
+    //-webkit-transform: translate3d(0,-20px,0);
+    //transform: translate3d(0,-20px,0);
 
-
-
-@-webkit-keyframes fade {
-    0% {
-        color: transparent;
-    }
-    50% {
-        color: #505050;
-    }
-    100% {
-        color: transparent;
+    &.open{
+        //-webkit-transform: translate3d(0,-20px,0);
+        //transform: translate3d(0,-20px,0);
+        -webkit-transition: all 0.5s ease-in;
+        -moz-transition: all 0.5s ease-in;
+        -ms-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+        transition: all 0.5s ease-in;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        background: $antrazit;
+        width: 100%;
+        height: 100%;
     }
 }
 
-@keyframes fade {
-    0% {
-        color: transparent;
-    }
-    50% {
-        color: #505050;
-    }
-    100% {
-        color: transparent;
-    }
-}
-
-@-webkit-keyframes size {
-    0% {
-        padding-top: 0;
-    }
-    50% {
-        padding-top: 8px;
-    }
-    100% {
-        padding-top: 0
-    }
-}
-
-@keyframes size {
-    0% {
-        padding-top: 0;
-    }
-    50% {
-        padding-top: 8px;
-    }
-    100% {
-        padding-top: 0
-    }
+.cb__single__closebtn {
+    font-size: 40px;
+    color: $egg;
+    position: absolute;
+    top: 30px;
+    right: 30px;
 }

@@ -4,18 +4,24 @@ $black: #000000;
 $textcolor: #111111;
 $gray: #787878;
 $lightgray: #D4D4D4;
-$antrazit: #333333;
+$antrazit: #1E1D1F;
+$primary: #7beec7;
+$egg: #ccc;
 
-//Font-sizes
-$font-size-base: 14px;
-$font-size-nav: 18px;
-$font-size-btn: 20px;
+//Colorscheme 2
+$dark: #314455;
+$redwine: #644e5b;
+$redcherry: #9e5a63;
+$red: #c96567;
+$greey: #97aabd;
 
-$headline-large: 24px;
-$headline-medium: 22px;
-$headline-small: 18px;
-$headline-xsmall: 16px;
 
+//Colorscheme 1
+$eggshell: #eae7dc;
+$vanilla: #d8c3a5;
+$taupe: #8e8d8a;
+$beanredlight: #e98074;
+$beanreddark: #e85a4f;
 
 .copy {
     &:before {
@@ -23,116 +29,112 @@ $headline-xsmall: 16px;
     }
 }
 
+// mixin
+@mixin angle($pseudo, $flip: false, $angle: 1.5deg) {
+  // Possible values for $pseudo are: before, after, both
+  @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
+    position: relative;
+    z-index: 1;
+    $selector: if($pseudo == 'both', '&:before,&:after', '&:#{$pseudo}');
 
-//Headline Mixins
-@mixin headline--large($modifier:default) {
-    display: block;
-    font-size: $headline-large;
-    line-height: $headline-large + 8;
-    color: $textcolor;
-    @include LektonRegular;
-
-
-    @media (max-width: $screen-tablet) {
-        font-size: 35px;
-        line-height: 40px;
+    #{$selector} {
+      background: inherit;
+      content: '';
+      display: block;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      -webkit-backface-visibility: hidden; // for Chrome Windows
     }
+
+    @if $pseudo == 'before' {
+      #{$selector} {
+        top: 0;
+
+        @if $flip {
+          transform: skewY($angle * -1);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle);
+          transform-origin: 100% 0;
+        }
+      }
+    }
+
+    @if $pseudo == 'after' {
+      #{$selector} {
+        bottom: 0;
+
+        @if $flip {
+          transform: skewY($angle);
+          transform-origin: 0 100%;
+        } @else {
+          transform: skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+
+    @if $pseudo == 'both' {
+      &:before {
+        top: 0;
+
+        @if $flip {
+          transform: skewY($angle * -1);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle);
+          transform-origin: 100% 0;
+        }
+      }
+
+      &:after {
+        bottom: 0;
+
+        @if $flip {
+          transform: skewY($angle);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+  }
 }
 
-@mixin headline--medium($modifier:default) {
-    display: block;
-    font-size: $headline-medium;
-    line-height: $headline-medium + 8;
-    color: $textcolor;
-    margin-bottom: 35px;
-    @include LektonRegular;
-
-    @media (max-width: $screen-tablet) {
-        font-size: 30px;
-        line-height: 35px;
-    }
+// slanted edges here
+.edge--bottom {
+  @include angle(after);
 }
 
-@mixin headline--small($modifier:default) {
-    display: block;
-    font-size: $headline-small;
-    line-height: $headline-small + 8;
-    color: $textcolor;
-    margin-bottom: 5px;
-    @include LektonRegular;
-
-    @media (max-width: $screen-tablet) {
-        font-size: 20px;
-        line-height: 25px;
-    }
+.edge--bottom--reverse {
+  @include angle(after, true);
 }
 
-@mixin headline--xsmall($modifier:default) {
-    display: block;
-    font-size: $headline-xsmall;
-    line-height: $headline-xsmall + 8;
-    color: $textcolor;
-    margin-bottom: 5px;
-    @include LektonRegular;
+.edge--top {
+  @include angle(before);
+}
 
-    @media (max-width: $screen-tablet) {
-        font-size: 20px;
-        line-height: 25px;
-    }
+.edge--top--reverse {
+  @include angle(before, true);
+}
+
+.edge--both {
+  @include angle(both);
+}
+
+.edge--both--reverse {
+  @include angle(both, true);
 }
 
 
-@mixin link($fontsize, $lineheight, $color, $font) {
-    display: block;
-    font-size: $fontsize;
-    line-height: $lineheight;
-    color: $color;
-    @include font;
-}
-
-
-//Buttons Mixin
-@mixin btn ($modifier:default) {
-    @include font-black;
-    display: inline-block;
-    text-align: center;
-    cursor: pointer;
-    text-transform: uppercase;
-    padding: 13px;
-    margin: 0 10px;
-    font-size: $font-size-btn;
-    line-height: $font-size-btn;
-    color: $darkgray;
-    border: 1px solid $darkgray;
-    background: $white;
-
-    @media (max-width: $screen-lg-desktop) {
-        font-size: $font-size-btn - 2;
-    }
-
-    @media (max-width: $screen-desktop) {
-        margin: 10px 5px;
-    }
-
-    &:hover {
-        background: $darkgray;
-        color: $white;
-        border: 1px solid $darkgray;
-        text-decoration: none;
-    }
-
-    &:active {
-        background: $darkgray;
-        color: $white;
-        border: 1px solid $darkgray;
-        text-decoration: none;
-    }
-
-    &:focus {
-        background: $darkgray;
-        color: $white;
-        border: 1px solid $darkgray;
-        outline: 0;
-        text-decoration: none;
-    }
+.gradient {
+background: rgb(76,76,76);
+background: -moz-radial-gradient(center, ellipse cover, rgba(76,76,76,1) 0%, rgba(19,19,19,1) 80%);
+background: -webkit-radial-gradient(center, ellipse cover, rgba(76,76,76,1) 0%,rgba(19,19,19,1) 80%);
+background: radial-gradient(ellipse at center, rgba(76,76,76,1) 0%,rgba(19,19,19,1) 80%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=1 );
 }
