@@ -2,6 +2,51 @@
 /* =Style for single page
 //-------------------------------------------------------------- */
 
+.cb__singlepage__wrapper {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: $antrazit;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  -webkit-transform: translate3d(0, 120%, 0);
+  -moz-transform: translate3d(0, 120%, 0);
+  -ms-transform: translate3d(0, 120%, 0);
+  -o-transform: translate3d(0, 120%, 0);
+  transform: translate3d(0, 120%, 0);
+  z-index: 4;
+
+  &.open{
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  @include media-breakpoint-down(sm) {
+    overflow-y: scroll;
+  }
+}
+
+#result {
+  height: 100%;
+  width: 100%;
+
+  .carousel,
+  .carousel-inner,
+  .carousel-item {
+    height: 100%;
+  }
+}
+
 .cb__single__content {
   margin-bottom: 25px;
 }
@@ -10,14 +55,23 @@
 .cb__single__info__inner {
   display: flex;
   flex-direction: column;
-  margin: 20px 0 auto auto;
+  margin: 0 0 auto auto;
+
+    @include media-breakpoint-down(sm) {
+        flex-direction: row;
+    }
 }
 
+.cb__single__info__item {
+  @include media-breakpoint-down(sm) {
+    margin: 0 10px;
+  }
+}
 
 .cb__single__info__headline {
-  @include UbuntuBold;
-  font-size: 14px;
-  line-height: 18px;
+  @include LektonBold;
+  font-size: 18px;
+  line-height: 19px;
   margin:0;
 }
 
@@ -42,7 +96,6 @@
   height: 48px;
   text-align: center;
   line-height: 48px;
-  border: 1px solid $lightgray;
   font-size: 24px;
 
   &.home {
@@ -58,14 +111,16 @@
 
 
 .cb__single__btn__link {
+  border: 1px solid $egg;
   background: transparent;
   outline: none;
   position: relative;
   overflow: hidden;
   display: block;
-  color: $textcolor;
+  color: $egg;
 
   &:before {
+    @include LektonBold;
     content: attr(data-hover);
     position: absolute;
     left: 0;
@@ -78,22 +133,25 @@
     transform: translate(100%, 0);
     transition: all .3s ease-in-out;
     font-size: 10px;
-    background: $primary;
+    background: $redcherry;
   }
 
   &:hover {
     cursor: pointer;
+    border: 1px solid $redcherry;
+
 
     &:before {
       opacity: 1;
       transform: translate(0, 0);
-      color: #111;
+      color: $egg;
       font-weight: 100;
     }
 
     .cb__single__btn__icon {
       opacity: 0;
       transform: translate(100%, 0);
+      color: $egg;
     }
   }
 }
@@ -110,8 +168,14 @@
 /* =Slider
 -------------------------------------------------------------- */
 
+#cb__main__slider {
+  height: 90vh;
+  width: 95%;
+}
+
 .cb__single__slider {
   position: relative;
+  text-align: center;
 }
 
 .cb__single__slider__control__inner {
@@ -125,11 +189,11 @@
   text-align: center;
 
   &.left {
-    left: 20px;
+    left: -45px;
   }
 
   &.right {
-    right: 20px;
+    right: -45px;
   }
 }
 
@@ -138,12 +202,12 @@
   width: 100%;
   height: 100%;
   font-size: 30px;
-  color: #111111;
-  border: 1px solid #fff;
+  color: $egg;
+  border: 1px solid $egg;
 
   &:hover {
-    color: #fff;
-    background: $primary;
-    border: 1px solid $primary;
+    color: $egg;
+    background: $redcherry;
+    border: 1px solid $redcherry;
   }
 }

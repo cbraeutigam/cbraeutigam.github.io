@@ -25,29 +25,35 @@ $(document).ready(function () {
     $('#scroll-top').scrollToTop();
 
 
-    //WOW Animation init 
+    //WOW Animation init
     new WOW().init();
 
-    //Slider single page
-    var owl = $('.single-slider');
-
-    owl.owlCarousel({
-        singleItem: true,
-        pagination: false,
-        autoPlay: 5000,
-        slideSpeed: 300
+    // Slider single page
+    $('.single-slider').each(function() {
+        $(this).owlCarousel({
+            autoplay: true,
+            autoplayHoverPause: true,
+            rewind: true,
+            // animateIn: 'linear',
+            // animateOut: 'linear',
+            items:1,
+            smartSpeed: 750,
+              margin:30,
+    stagePadding:30
+        });
     });
+
 
     $('.prev-slide').on('click', function(e) {
         e.preventDefault();
         console.log('click prev')
-        owl.trigger('owl.prev');
+        $('.single-slider').trigger('prev.owl.carousel');
     });
 
     $('.next-slide').on('click', function(e) {
         e.preventDefault();
         console.log('click next')
-        owl.trigger('owl.next');
+        $('.single-slider').trigger('next.owl.carousel');
     });
 
     $(window).scroll(function() {
@@ -55,26 +61,20 @@ $(document).ready(function () {
     });
 
 
-
-    var content;
-
     $('.cb__portfolio__item__link').on('click', function(e){
         e.preventDefault();
-        $.get('single-project.html', function(data){
-            content= data;
-            $('#result').prepend(content);
-            $('#result').addClass('fadeInUp');
-            $('#result').addClass('open');
-        });
+        var target = parseInt($(this).attr('data-id'));
+        $('#cb__main__slider').carousel(target);
+
+        setTimeout(function(){
+            $('.cb__singlepage__wrapper').addClass('open');
+        }, 400);
     });
 
- $('.cb__single__closebtn').on('click', function(e){
-      e.preventDefault();
-     $('#result').empty(content);
-      $('#result').removeClass('open');
- });
-
-
+    $('.cb__single__closebtn').on('click', function(e){
+        e.preventDefault();
+        $('.cb__singlepage__wrapper').removeClass('open');
+    });
 
 });
 
@@ -90,7 +90,7 @@ function parallaxFade() {
     });
 }
 
-//Scroll Top 
+//Scroll Top
 $.fn.scrollToTop = function() {
     $(this).hide().removeAttr('href');
     if ($(window).scrollTop() != '0') {

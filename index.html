@@ -24,7 +24,7 @@
 
 
     <!-- Modernizer & Respond js -->
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <!--<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>-->
 </head>
 
 <body>
@@ -113,54 +113,39 @@
             <div class="cb__porfolio__wrapper col-12">
                 <div class="row">
 
-
-                    <div class="col">
+                    <div class="col-12 col-sm-3 cb__portfolio__item__outer">
                         <div class="cb__portfolio__item" style="background-image: url(http://taylorkmho.com/assets/images/projects/lum-bg.jpg);">
-                            <div class="cb__portfolio__item__image"></div>
-                            <div class="cb__portfolio__item__overlay">
-
-                                <div class="cb__portfolio__item__content">
-                                    <h4 class="cb__portfolio__item__title">Onlinegames</h4>
-                                </div>
-                                <a class="cb__portfolio__item__link" href="#"></a>
-
-                            </div>
+                            <a class="cb__portfolio__item__link" href="#" data-id="0">
+                                <img class="cb__portfolio__item__icon" src="img/icon_games_w.svg" />
+                                <h4 class="cb__portfolio__item__title">Online games</h4>
+                            </a>
                         </div>
                     </div>
-                    <div class="col">
+
+                    <div class="col-12 col-sm-3 cb__portfolio__item__outer">
                         <div class="cb__portfolio__item" style="background-image: url(http://taylorkmho.com/assets/images/projects/sub-bg.jpg);">
-                            <div class="cb__portfolio__item__overlay">
-
-                                <div class="cb__portfolio__item__content">
-                                    <h4 class="cb__portfolio__item__title">Onepagers</h4>
-                                </div>
-                                <a class="cb__portfolio__item__link" href="single-project.html"></a>
-
-                            </div>
+                            <a class="cb__portfolio__item__link" href="#" data-id="1">
+                                <img class="cb__portfolio__item__icon" src="img/icon_coding_w.svg" />
+                                <h4 class="cb__portfolio__item__title">Onepager</h4>
+                            </a>
                         </div>
                     </div>
-                    <div class="col">
+
+                    <div class="col-12 col-sm-3 cb__portfolio__item__outer">
                         <div class="cb__portfolio__item" style="background-image: url(http://taylorkmho.com/assets/images/projects/fnd-bg.jpg);">
-                            <div class="cb__portfolio__item__overlay">
-
-                                <div class="cb__portfolio__item__content">
-                                    <h4 class="cb__portfolio__item__title">Relaunch</h4>
-                                </div>
-                                <a class="cb__portfolio__item__link" href="single-project.html"></a>
-
-                            </div>
+                            <a class="cb__portfolio__item__link" href="#" data-id="2">
+                                <img class="cb__portfolio__item__icon" src="img/icon_relaunch_w.svg" />
+                                <h4 class="cb__portfolio__item__title">Website Relaunch</h4>
+                            </a>
                         </div>
                     </div>
-                    <div class="col">
+
+                    <div class="col-12 col-sm-3 cb__portfolio__item__outer">
                         <div class="cb__portfolio__item" style="background-image: url(http://taylorkmho.com/assets/images/projects/sek-bg.jpg);">
-                            <div class="cb__portfolio__item__overlay">
-
-                                <div class="cb__portfolio__item__content">
-                                    <h4 class="cb__portfolio__item__title">SSA</h4>
-                                </div>
-                                <a class="cb__portfolio__item__link" href="single-project.html"></a>
-
-                            </div>
+                            <a class="cb__portfolio__item__link" href="#" data-id="3">
+                                <img class="cb__portfolio__item__icon" src="img/icon_motion_w.svg" />
+                                <h4 class="cb__portfolio__item__title">Motion Graphic</h4>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -176,7 +161,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-3 cb__about__banner__headline-wrapper">
+                <div class="col-12 col-lg-3 cb__about__banner__headline-wrapper">
                     <h2 class="cb__headline__section cb__about__banner__headline">About</h2>
                 </div>
                 <div class="col">
@@ -195,8 +180,326 @@
 </div>
 
 
+<div class="cb__singlepage__wrapper">
 
-<div id="result"></div>
+    <div id="cb__main__slider" class="carousel slide" data-ride="carousel" data-interval="0">
+
+        <div class="carousel-inner" role="listbox">
+
+            <div class="carousel-item active">
+
+                <div class="container">
+                    <div class="cb__single__slider col-12 col-md-10 offset-md-1">
+                        <div class="owl-carousel single-slider">
+                            <div><img class="img-responsive center-block" src="img/projects/og_1.png" alt="slider"></div>
+                            <div><img class="img-responsive center-block" src="img/projects/og_2.png" alt="slider"></div>
+                            <div><img class="img-responsive center-block" src="img/projects/og_3.png" alt="slider"></div>
+                            <div><img class="img-responsive center-block" src="img/projects/og_4.png" alt="slider"></div>
+
+                        </div>
+                        <div class="cb__single__slider__control">
+                            <div class="cb__single__slider__control__inner left">
+                                <a class="cb__single__slider__link prev-slide" href="#">
+                                    <i class="pe-7s-angle-left"></i>
+                                </a>
+                            </div>
+                            <div class="cb__single__slider__control__inner right">
+                                <a class="cb__single__slider__link next-slide" href="#">
+                                    <i class="pe-7s-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="cb__single__headline col-12 col-md-10 offset-md-1">
+                            <h2 class="cb__headline__section">Online Games</h2>
+                            <hr class="cb__divider__section">
+                        </div>
+
+                        <div class="col-12 col-md-8 offset-md-1 cb__single__content">
+
+                            <p class="cb__para__section">
+                                For some of TOTAL's monthly campaigns, we proposed to create simple browser games, to increase the engagement of the brand with its audience.
+                                The ideation, design, animation and development were all done inhouse.
+                            </p>
+                            <p class="cb__para__section">
+                                The range of games varied from a basic memory game for the "Red Bull" campaign to some quiz and matchmaking cardswipe games for campaings such as
+                                "Ice Age" or "Die Schlümpfe".
+                            </p>
+                            <p class="cb__para__section">
+                                Bigger games like the ones for the "Space Travellers" and "Peter Hase" campaigns were built in Phaser.
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-3 cb__single__info">
+
+
+                            <div class="cb__single__info__inner">
+                                <div class="cb__single__info__item">
+                                    <p class="cb__single__info__headline">Client</p>
+                                    <p class="cb__single__info__para">TOTAL</p>
+                                </div>
+
+                                <div class="cb__single__info__item">
+                                    <p class="cb__single__info__headline">Technology</p>
+                                    <p class="cb__single__info__para">HTML, SASS, Jquery, Phaser</p>
+                                </div>
+                                <div class="cb__single__info__item">
+                                    <p class="cb__single__info__headline">My part</p>
+                                    <p class="cb__single__info__para">
+                                        Concept, Development
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="carousel-item">
+
+                <div class="container">
+                    <div class="cb__single__slider col-12 col-md-10 offset-md-1">
+                        <div class="owl-carousel single-slider">
+                            <div><img class="img-responsive center-block" src="img/img_1.jpg" alt="slider"></div>
+                            <div><img class="img-responsive center-block" src="img/img_1.jpg" alt="slider"></div>
+                        </div>
+                        <div class="cb__single__slider__control">
+                            <div class="cb__single__slider__control__inner left">
+                                <a class="cb__single__slider__link prev-slide" href="#">
+                                    <i class="pe-7s-angle-left"></i>
+                                </a>
+                            </div>
+                            <div class="cb__single__slider__control__inner right">
+                                <a class="cb__single__slider__link next-slide" href="#">
+                                    <i class="pe-7s-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="cb__single__headline col-12 col-md-10 offset-md-1">
+                            <h2 class="cb__headline__section">OnePager</h2>
+                            <hr class="cb__divider__section">
+                        </div>
+
+                        <div class="col-12 col-md-8 offset-md-1 cb__single__content">
+
+                            <p class="cb__para__section">
+                                For some of TOTAL's monthly campaigns, we proposed to create simple browser games, to increase the engagement of the brand with its audience.
+                                The ideation, design, animation and development were all done inhouse.
+                            </p>
+                            <p class="cb__para__section">
+                                The range of games varied from a basic memory game for the "Red Bull" campaign to some quiz and matchmaking cardswipe games for campaings such as
+                                "Ice Age" or "Die Schlümpfe".
+                            </p>
+                            <p class="cb__para__section">
+                                Bigger games like the ones for the "Space Travellers" and "Peter Hase" campaigns were built in Phaser.
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-3 cb__single__info">
+
+
+                            <div class="cb__single__info__inner">
+                                <p class="cb__single__info__headline">Client</p>
+                                <p class="cb__single__info__para">TOTAL</p>
+
+                                <p class="cb__single__info__headline">Technology</p>
+                                <p class="cb__single__info__para">HTML, SASS, Jquery, Phaser</p>
+
+                                <p class="cb__single__info__headline">My part</p>
+                                <p class="cb__single__info__para">
+                                    Concept, Development, Framework ??
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="carousel-item">
+
+                <div class="container">
+                    <div class="cb__single__slider col-12 col-md-10 offset-md-1">
+                        <div class="owl-carousel single-slider">
+                            <div><img class="img-responsive center-block" src="img/img_1.jpg" alt="slider"></div>
+                            <div><img class="img-responsive center-block" src="img/img_1.jpg" alt="slider"></div>
+                        </div>
+                        <div class="cb__single__slider__control">
+                            <div class="cb__single__slider__control__inner left">
+                                <a class="cb__single__slider__link prev-slide" href="#">
+                                    <i class="pe-7s-angle-left"></i>
+                                </a>
+                            </div>
+                            <div class="cb__single__slider__control__inner right">
+                                <a class="cb__single__slider__link next-slide" href="#">
+                                    <i class="pe-7s-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="cb__single__headline col-12 col-md-10 offset-md-1">
+                            <h2 class="cb__headline__section">Website Relaunch</h2>
+                            <hr class="cb__divider__section">
+                        </div>
+
+                        <div class="col-12 col-md-8 offset-md-1 cb__single__content">
+
+                            <p class="cb__para__section">
+                                For some of TOTAL's monthly campaigns, we proposed to create simple browser games, to increase the engagement of the brand with its audience.
+                                The ideation, design, animation and development were all done inhouse.
+                            </p>
+                            <p class="cb__para__section">
+                                The range of games varied from a basic memory game for the "Red Bull" campaign to some quiz and matchmaking cardswipe games for campaings such as
+                                "Ice Age" or "Die Schlümpfe".
+                            </p>
+                            <p class="cb__para__section">
+                                Bigger games like the ones for the "Space Travellers" and "Peter Hase" campaigns were built in Phaser.
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-3 cb__single__info">
+
+
+                            <div class="cb__single__info__inner">
+                                <p class="cb__single__info__headline">Client</p>
+                                <p class="cb__single__info__para">TOTAL</p>
+
+                                <p class="cb__single__info__headline">Technology</p>
+                                <p class="cb__single__info__para">HTML, SASS, Jquery, Phaser</p>
+
+                                <p class="cb__single__info__headline">My part</p>
+                                <p class="cb__single__info__para">
+                                    Concept, Development, Framework ??
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="carousel-item">
+
+                <div class="container">
+                    <div class="cb__single__slider col-md-10 offset-md-1">
+                        <div class="owl-carousel single-slider">
+                            <div><img class="img-responsive center-block" src="img/img_1.jpg" alt="slider"></div>
+                            <div><img class="img-responsive center-block" src="img/img_1.jpg" alt="slider"></div>
+                        </div>
+                        <div class="cb__single__slider__control">
+                            <div class="cb__single__slider__control__inner left">
+                                <a class="cb__single__slider__link prev-slide" href="#">
+                                    <i class="pe-7s-angle-left"></i>
+                                </a>
+                            </div>
+                            <div class="cb__single__slider__control__inner right">
+                                <a class="cb__single__slider__link next-slide" href="#">
+                                    <i class="pe-7s-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="cb__single__headline col-md-10 offset-md-1">
+                            <h2 class="cb__headline__section">Motion Graphic</h2>
+                            <hr class="cb__divider__section">
+                        </div>
+
+                        <div class="col-12 col-md-8 offset-md-1 cb__single__content">
+
+                            <p class="cb__para__section">
+                                For some of TOTAL's monthly campaigns, we proposed to create simple browser games, to increase the engagement of the brand with its audience.
+                                The ideation, design, animation and development were all done inhouse.
+                            </p>
+                            <p class="cb__para__section">
+                                The range of games varied from a basic memory game for the "Red Bull" campaign to some quiz and matchmaking cardswipe games for campaings such as
+                                "Ice Age" or "Die Schlümpfe".
+                            </p>
+                            <p class="cb__para__section">
+                                Bigger games like the ones for the "Space Travellers" and "Peter Hase" campaigns were built in Phaser.
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-3 cb__single__info">
+
+
+                            <div class="cb__single__info__inner">
+                                <p class="cb__single__info__headline">Client</p>
+                                <p class="cb__single__info__para">TOTAL</p>
+
+                                <p class="cb__single__info__headline">Technology</p>
+                                <p class="cb__single__info__para">HTML, SASS, Jquery, Phaser</p>
+
+                                <p class="cb__single__info__headline">My part</p>
+                                <p class="cb__single__info__para">
+                                    Concept, Development, Framework ??
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="cb__single__controls col-12 col-md-10 offset-md-1">
+                    <div class="cb__single__btn home">
+                        <a class="cb__single__btn__link cb__single__closebtn" href="#" data-hover="Home">
+                            <i class="cb__single__btn__icon pe-7s-keypad"></i>
+                        </a>
+                    </div>
+                    <div class="cb__single__btn forward">
+                        <a class="cb__single__btn__link" data-hover="Next" href="#cb__main__slider" role="button" data-slide="next">
+                            <i class="cb__single__btn__icon pe-7s-angle-right"></i>
+                        </a>
+                    </div>
+                    <div class="cb__single__btn back">
+                        <a class="cb__single__btn__link" data-hover="Previous" href="#cb__main__slider" role="button" data-slide="prev">
+                            <i class="cb__single__btn__icon pe-7s-angle-left"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
 
 
 <div class="cb__footer">
@@ -253,7 +556,8 @@
 <script type="text/javascript" src="js/libs/jquery.3.3.1.min.js"></script>
 <script type="text/javascript" src="js/libs/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/libs/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="js/libs/owl.carousel.min.js"></script>
+<!--<script type="text/javascript" src="js/libs/owl.carousel.min.js"></script>-->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script data-pace-options='{ "ajax": false }' src="js/libs/pace.min.js"></script>
 <script src="js/libs/wow.min.js"></script>
 

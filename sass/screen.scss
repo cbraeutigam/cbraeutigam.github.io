@@ -4,15 +4,18 @@
 
 // Import Bootstrap for Sass
 @import "_bootstrap-variables";
-@import "bootstrap/bootstrap-custom";
+//@import "bootstrap/bootstrap-custom";
+@import "bootstrap/bootstrap";
 
 //Import Icon-Fonts
 @import "font-awesome/fa-typo";
 @import "pe-iconfont";
 
 //Import third party css
-@import url(/css/owl.carousel.css);
-@import url(/css/owl.theme.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css);
+//@import url(/css/owl.carousel.css);
+//@import url(/css/owl.theme.css);
 
 // Import basics
 @import "_typo";

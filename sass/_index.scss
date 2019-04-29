@@ -8,6 +8,7 @@
 
 html {
     height: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -16,7 +17,7 @@ body {
     color: $egg;
     background: $antrazit;
     margin: 0;
-    overflow-x: hidden !important;
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     height: 100%;
     width: 100%;
@@ -50,14 +51,14 @@ body {
     background-color: $redwine;
     text-align: center;
     color: $white;
-    z-index: 9;
+    z-index: 3;
 
     span {
         color: $egg;
         font-size: 30px;
         position: absolute;
         left: 12px;
-        top: 10px;
+        top: 4px;
     }
 }
 
@@ -83,6 +84,15 @@ body {
         height: .25rem;
         width: 1rem;
     }
+
+    .cb__single__headline & {
+        margin: 15px 0 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+        font-size: 40px;
+        line-height: 50px;
+    }
 }
 
 .cb__divider__section {
@@ -93,8 +103,13 @@ body {
 
 .cb__para__section {
     @include UbuntuLight;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 19px;
+    line-height: 23px;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 16px;
+        line-height: 22px;
+    }
 }
 
 
@@ -198,15 +213,30 @@ body {
     position: absolute;
     top: 0;
 
+    @include media-breakpoint-between(md, lg) {
+        width: 22%;
+    }
+
+    @include media-breakpoint-down(md) {
+        width: 100%;
+        height: 100px;
+    }
+
     &:after {
         content: '';
         width: 0;
         height: 0;
         border-style: solid;
-        border-width: 91px 0 91px 100px;
+        border-width: 82px 0 82px 100px;
         border-color: transparent transparent transparent $redwine;
         position: absolute;
         right: -100px;
+
+        @include media-breakpoint-down(md) {
+            border-width: 60px 0 50px 100px;
+            left: 0;
+            right: auto;
+        }
     }
 }
 
@@ -224,6 +254,10 @@ body {
 
 .cb__about__banner__headline {
     margin: 0;
+
+    @include media-breakpoint-down(md) {
+        margin: 0 0 20px;
+    }
 }
 
 /* =Overlay Thumb Portfolio
@@ -238,6 +272,11 @@ body {
     margin: 30px 0 60px;
 }
 
+.cb__portfolio__item__outer {
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 30px;
+    }
+}
 
 .cb__portfolio__item {
     position: relative;
@@ -254,39 +293,62 @@ body {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+
+    @include media-breakpoint-only(lg) {
+        min-height: 300px;
+    }
+
+
+    @include media-breakpoint-only(md) {
+        min-height:  250px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        min-height: 200px;
+    }
 }
 
+.cb__portfolio__item__content {
+    padding: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.cb__portfolio__item__icon {
+    width: 50%;
+    margin: 0 auto;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -webkit-transform: translate3d(0,-20px,0);
+    transform: translate3d(0,-20px,0);
+
+    @include media-breakpoint-down(sm) {
+        width: 30%;
+    }
+}
 
 .cb__portfolio__item__link {
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     height: 100%;
-    z-index: 4;
-    cursor: url(../img/cursor.png), auto;
-}
-
-.cb__portfolio__item__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border: none;
-    transition: all 0.5s ease-out;
-    z-index: 4;
-
+    flex-direction: column;
+    text-align: center;
 
 
     &:before,
     &:after {
         position: absolute;
         top: 30px;
-        right: 30px;
+        right: 20px;
         bottom: 30px;
-        left: 30px;
+        left: 20px;
         content: '';
         opacity: 0;
         -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -308,8 +370,10 @@ body {
         transform: scale(1,0);
     }
 
+
     &:hover {
         background-color: rgba($redwine, .9);
+        text-decoration: none;
 
         &:before,
         &:after {
@@ -319,10 +383,9 @@ body {
 
         }
 
+        .cb__portfolio__item__icon,
         .cb__portfolio__item__title {
-            top: 0;
             transition-delay: 0.15s;
-            opacity: 1;
             -webkit-transform: translate3d(0,0,0);
             transform: translate3d(0,0,0);
         }
@@ -330,67 +393,31 @@ body {
     }
 }
 
+
 .cb__portfolio__item__title {
     margin-bottom: 0;
     text-transform: uppercase;
     position: relative;
-    z-index: 1;
+    display: block;
+    font-size: 28px;
+    letter-spacing: 1.2pt;
+    line-height: 38px;
+    color: #ccc;
     transition: 0.3s ease;
     -webkit-transition: 0.3s ease;
     -moz-transition: 0.3s ease;
     -o-transition: 0.3s ease;
     -ms-transition: 0.3s ease;
-    display: block;
-    opacity: 0;
-    top: 100px;
-    transition-property: top, opacity;
-    transition-duration: 0.3s;
-    transition-delay: 0s;
-    font-size: 28px;
-    letter-spacing: 1.2pt;
-    line-height: 38px;
-    color: $egg;
-    -webkit-transition: -webkit-transform 0.35s;
-    transition: transform 0.35s;
     -webkit-transform: translate3d(0,-20px,0);
     transform: translate3d(0,-20px,0);
-}
 
-
-.cb__portfolio__item__content {
-    padding: 40px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 3;
-}
-
-
-#result {
-    //-webkit-transform: translate3d(0,-20px,0);
-    //transform: translate3d(0,-20px,0);
-
-    &.open{
-        //-webkit-transform: translate3d(0,-20px,0);
-        //transform: translate3d(0,-20px,0);
-        -webkit-transition: all 0.5s ease-in;
-        -moz-transition: all 0.5s ease-in;
-        -ms-transition: all 0.5s ease-in;
-        -o-transition: all 0.5s ease-in;
-        transition: all 0.5s ease-in;
-        position: fixed;
-        top: 0;
-        z-index: 10;
-        background: $antrazit;
-        width: 100%;
-        height: 100%;
+    @include media-breakpoint-only(md) {
+        font-size: 22px;
+        line-height: 25px;
     }
-}
 
-.cb__single__closebtn {
-    font-size: 40px;
-    color: $egg;
-    position: absolute;
-    top: 30px;
-    right: 30px;
+    @include media-breakpoint-down(sm) {
+        font-size: 22px;
+        line-height: 25px;
+    }
 }
