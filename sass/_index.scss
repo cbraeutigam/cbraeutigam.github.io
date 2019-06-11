@@ -185,15 +185,16 @@ svg {
 }
 
 .cb__heroheader__image {
-    width: 80%;
+    width: 100vh;
 
-    @media (min-width: 376px) and (max-width: 667px) {
-        width: 50%;
-    }
+    // @media (min-width: 376px) and (max-width: 667px) {
+    //     width: 50%;
+    // }
 
-    @media (min-width: 668px) and (max-width: 768px) {
-        width: 80%;
-    }
+    // @media (min-width: 668px) and (max-width: 768px) {
+    //     width: 80%;
+    // }
+
 
     @media (max-width: 375px) {
         width: 100%;
@@ -215,19 +216,19 @@ svg {
             display: block;
             bottom: 0;
             right: 0;
-            width: 80%;
+            width: 100%;
             height: 100%;
             border-collapse: separate;
             box-shadow: inset 40px 0 40px -16px, inset -40px 0 40px -16px;
             color: $bgfade;
 
-            @media (min-width: 376px) and (max-width: 667px) {
-                width: 50%;
-            }
+            // @media (min-width: 376px) and (max-width: 667px) {
+            //     width: 50%;
+            // }
 
-            @media (min-width: 668px) and (max-width: 768px) {
-                width: 80%;
-            }
+            // @media (min-width: 668px) and (max-width: 768px) {
+            //     width: 80%;
+            // }
 
             @media (max-width: 375px) {
                 width: 100%;
