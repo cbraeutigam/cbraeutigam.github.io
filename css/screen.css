@@ -13418,7 +13418,7 @@ body {
 #mysvg {
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: absolute;
   background-attachment: fixed;
 }
 
@@ -13888,7 +13888,7 @@ body {
 
 @media (max-width: 767.98px) {
   .cb__portfolio__item__icon {
-    width: 30%;
+    width: 22%;
   }
 }
 
@@ -13949,13 +13949,20 @@ body {
   transform: scale(1);
 }
 
-.cb__portfolio__item__link:hover .cb__portfolio__item__icon,
-.cb__portfolio__item__link:hover .cb__portfolio__item__title {
+.cb__portfolio__item__link:hover .cb__portfolio__item__icon {
   opacity: 1;
   -webkit-transition-delay: 0.15s;
           transition-delay: 0.15s;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+}
+
+.cb__portfolio__item__link:hover .cb__portfolio__item__title {
+  opacity: 1;
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+  -webkit-transform: translate3d(0, -20px, 0);
+  transform: translate3d(0, -20px, 0);
 }
 
 .cb__portfolio__item__title {
@@ -13987,6 +13994,8 @@ body {
   .cb__portfolio__item__title {
     font-size: 22px;
     line-height: 25px;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -14395,6 +14404,12 @@ body {
 #cb__main__slider {
   height: 90vh;
   width: 95%;
+}
+
+@media (max-width: 767.98px) {
+  #cb__main__slider {
+    width: 100%;
+  }
 }
 
 .cb__single__slider {
