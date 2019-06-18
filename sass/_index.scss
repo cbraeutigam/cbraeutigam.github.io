@@ -89,13 +89,17 @@ svg {
     &:after {
         content: "";
         position: absolute;
-        bottom: 0;
+        bottom: -5px;
         right: 0;
         -ms-transform: translateX(110%) translateY(-1.2rem);
         transform: translateX(110%) translateY(-1.2rem);
         background-color: $redcherry;
         height: .25rem;
         width: 1rem;
+
+        @include media-breakpoint-down(sm) {
+            bottom: -6px;
+        }
     }
 
     .cb__single__headline & {
@@ -105,6 +109,11 @@ svg {
     @include media-breakpoint-down(sm) {
         font-size: 40px;
         line-height: 45px;
+    }
+
+    @include media-breakpoint-only(xs) {
+        font-size: 30px;
+        line-height: 40px;
     }
 }
 
@@ -191,9 +200,9 @@ svg {
     //     width: 50%;
     // }
 
-    // @media (min-width: 668px) and (max-width: 768px) {
-    //     width: 80%;
-    // }
+    @media (min-width: 668px) and (max-width: 768px) {
+        width: 70vh;
+    }
 
 
     @media (max-width: 375px) {
@@ -226,9 +235,9 @@ svg {
             //     width: 50%;
             // }
 
-            // @media (min-width: 668px) and (max-width: 768px) {
-            //     width: 80%;
-            // }
+            @media (min-width: 668px) and (max-width: 768px) {
+                width: 70vh;
+            }
 
             @media (max-width: 375px) {
                 width: 100%;
@@ -499,7 +508,7 @@ svg {
     height: 100%;
     flex-direction: column;
     text-align: center;
-
+    position: relative;
 
     &:before,
     &:after {
@@ -512,6 +521,14 @@ svg {
         opacity: 0;
         -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
         transition: opacity 0.35s, transform 0.35s;
+
+
+        @include media-breakpoint-only(md) {
+            top: 20px;
+            right: 10px;
+            bottom: 20px;
+            left: 10px;
+        }
     }
 
 
@@ -576,11 +593,12 @@ svg {
     -ms-transition: 0.3s ease;
     -webkit-transform: translate3d(0, 65px, 0);
     transform: translate3d(0, 65px, 0);
-    // opacity: 0;
 
     @include media-breakpoint-only(md) {
         font-size: 22px;
         line-height: 25px;
+        -webkit-transform: translate3d(0, 35px, 0);
+        transform: translate3d(0, 35px, 0);
     }
 
     @include media-breakpoint-down(sm) {

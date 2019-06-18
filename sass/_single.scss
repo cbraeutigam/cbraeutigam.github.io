@@ -9,6 +9,7 @@
   background: $antrazit;
   top: 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   -webkit-transition: all 0.5s ease-in;
@@ -24,12 +25,16 @@
   z-index: 4;
   overflow-y: auto;
 
-  &.open{
+  &.open {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 25px 0;
   }
 }
 
@@ -46,6 +51,10 @@
 
 .cb__single__content {
   margin-bottom: 25px;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 0;
+  }
 }
 
 
@@ -54,9 +63,9 @@
   flex-direction: column;
   margin: 0 0 auto auto;
 
-    // @include media-breakpoint-down(sm) {
-    //     flex-direction: row;
-    // }
+  // @include media-breakpoint-down(sm) {
+  //     flex-direction: row;
+  // }
 }
 
 .cb__single__info__item {
@@ -69,7 +78,7 @@
   @include LektonBold;
   font-size: 18px;
   line-height: 19px;
-  margin:0;
+  margin: 0;
 }
 
 
@@ -85,7 +94,12 @@
 /* =Controls
 -------------------------------------------------------------- */
 .cb__single__controls {
-  margin-bottom: 50px;
+  margin-top: 15px;
+  z-index: 1;
+
+  @include media-breakpoint-down(sm) {
+    margin: 15px 0;
+  }
 }
 
 .cb__single__btn {
@@ -177,12 +191,168 @@
 
   @include media-breakpoint-down(sm) {
     width: 100%;
+    height: auto;
+  }
+
+  .swiper-wrapper {
+    height: 80vh;
+
+    @include media-breakpoint-down(sm) {
+      height: 100%;
+    }
   }
 }
 
 .cb__single__slider {
   position: relative;
   text-align: center;
+  height: 100%;
+  padding: 0;
+
+  .carousel {
+    height: 100%;
+
+    // .carousel-indicators {
+    //   bottom: 0;
+    // }
+  }
+
+  // .cb__single__slider__gallery {
+  //   height: 100%;
+  //   width: 100%;
+
+  //   .swiper-slide {
+  //     background-size: contain;
+  //     background-position: center;
+  //     background-repeat: no-repeat;
+  //   }
+
+  //   .swiper-button-white {
+  //     @include media-breakpoint-down(sm) {
+  //       display: none;
+  //     }
+  //   }
+  // }
+
+
+  // #online-games {
+
+  //   .swiper-slide {
+  //     &.one {
+  //       background-image: url(/img/projects/og_1.png);
+
+  //       @include media-breakpoint-down(sm) {
+  //         background-image: url(/img/projects/og_1_mobile.png);
+  //       }
+  //     }
+
+  //     &.two {
+  //       background-image: url(/img/projects/og_2.png);
+
+  //       @include media-breakpoint-down(sm) {
+  //         background-image: url(http://lorempixel.com/400/400/nature/2/);
+  //       }
+  //     }
+
+  //     &.three {
+  //       background-image: url(/img/projects/og_3.png);
+
+  //       @include media-breakpoint-down(sm) {
+  //         background-image: url(http://lorempixel.com/400/400/nature/3/);
+  //       }
+  //     }
+
+
+
+  //     &.four {
+  //       background-image: url(/img/projects/og_4.png);
+
+  //       @include media-breakpoint-down(sm) {
+  //         background-image: url(http://lorempixel.com/400/400/nature/4/);
+  //       }
+  //     }
+  //   }
+  // }
+
+  // #onepager {
+  //   .swiper-slide {
+  //     &.one {
+  //       background-image: url(/img/projects/og_1.png);
+
+  //       @include media-breakpoint-down(sm) {
+  //         background-image: url(http://lorempixel.com/400/400/nature/1/);
+  //       }
+  //     }
+
+  //     &.two {
+  //       background-image: url(/img/projects/og_2.png);
+
+  //       @include media-breakpoint-down(sm) {
+  //         background-image: url(http://lorempixel.com/400/400/nature/2/);
+  //       }
+  //     }
+
+  //     &.three {
+  //       background-image: url(/img/projects/og_3.png);
+
+  //       @include media-breakpoint-down(sm) {
+  //         background-image: url(http://lorempixel.com/400/400/nature/3/);
+  //       }
+  //     }
+
+
+
+  //     &.four {
+  //       background-image: url(/img/projects/og_4.png);
+
+  //       @include media-breakpoint-down(sm) {
+  //         background-image: url(http://lorempixel.com/400/400/nature/4/);
+  //       }
+  //     }
+  //   }
+  // }
+
+  // #relaunch {
+  //   .swiper-slide {
+  //     &.one {
+  //       background-image: url(/img/projects/og_1.png);
+
+  //       @include media-breakpoint-down(sm) {
+  //         background-image: url(http://lorempixel.com/400/400/nature/1/);
+  //       }
+  //     }
+
+  //     &.two {
+  //       background-image: url(/img/projects/og_2.png);
+
+  //       @include media-breakpoint-down(sm) {
+  //         background-image: url(http://lorempixel.com/400/400/nature/2/);
+  //       }
+  //     }
+
+  //     &.three {
+  //       background-image: url(/img/projects/og_3.png);
+
+  //       @include media-breakpoint-down(sm) {
+  //         background-image: url(http://lorempixel.com/400/400/nature/3/);
+  //       }
+  //     }
+
+
+
+  //     &.four {
+  //       background-image: url(/img/projects/og_4.png);
+
+  //       @include media-breakpoint-down(sm) {
+  //         background-image: url(http://lorempixel.com/400/400/nature/4/);
+  //       }
+  //     }
+  //   }
+  // }
+
+
+
+
 }
 
 .cb__single__slider__control__inner {
