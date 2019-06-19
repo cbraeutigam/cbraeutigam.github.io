@@ -6,44 +6,36 @@
   font-style: normal;
 }
 
-// @font-face {
-//   font-family: 'LektonBold';
-//   font-style: normal;
-//   font-weight: 700;
-//   src: local('Lekton-Bold'), url(https://fonts.gstatic.com/s/lekton/v9/SZc73FDmLaWmWpBm4zj8kmLW.woff2) format('woff2');
-//   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-// }
-
 @font-face {
   font-family: 'UbuntuLight';
+  src: url('/fonts/ubuntu/ubuntu-light-webfont.woff2') format('woff2'),
+  url('/fonts/ubuntu/ubuntu-light-webfont.woff') format('woff');
   font-style: normal;
   font-weight: 300;
-  src: local('Ubuntu Light'), local('Ubuntu-Light'), url(https://fonts.gstatic.com/s/ubuntu/v12/4iCv6KVjbNBYlgoC1CzjsGyN.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
   font-family: 'UbuntuRegular';
+  src: url('/fonts/ubuntu/ubuntu-regular-webfont.woff2') format('woff2'),
+  url('/fonts/ubuntu/ubuntu-regular-webfont.woff') format('woff');
   font-style: normal;
   font-weight: 400;
-  src: local('Ubuntu Regular'), local('Ubuntu-Regular'), url(https://fonts.gstatic.com/s/ubuntu/v12/4iCs6KVjbNBYlgoKfw72.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
   font-family: 'UbuntuMedium';
+  src: url('/fonts/ubuntu/ubuntu-medium-webfont.woff2') format('woff2'),
+  url('/fonts/ubuntu/ubuntu-medium-webfont.woff') format('woff');
   font-style: normal;
   font-weight: 500;
-  src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url(https://fonts.gstatic.com/s/ubuntu/v12/4iCv6KVjbNBYlgoCjC3jsGyN.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
   font-family: 'UbuntuBold';
+  src: url('/fonts/ubuntu/ubuntu-bold-webfont.woff2') format('woff2'),
+  url('/fonts/ubuntu/ubuntu-bold-webfont.woff') format('woff');
   font-style: normal;
   font-weight: 700;
-  src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url(https://fonts.gstatic.com/s/ubuntu/v12/4iCv6KVjbNBYlgoCxCvjsGyN.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @mixin LektonBold {
