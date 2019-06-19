@@ -37,6 +37,16 @@ body {
 /* =Global
 -------------------------------------------------------------- */
 
+.cb__main {
+    &.impressum {
+        padding-top: 50px;
+    }
+}
+
+.cb__impressum__backbtn-wrapper {
+    margin-bottom: 50px;
+}
+
 #bgsvg {
     width: 100%;
     height: 100%;
@@ -380,7 +390,7 @@ body {
     position: relative;
     overflow: hidden;
     display: inherit;
-    height: 100%;
+    height: 480px;
     background-color: $redcherry;
     background-size: cover;
     background-position: center center;
@@ -393,15 +403,17 @@ body {
     border-radius: 5px;
 
     @include media-breakpoint-only(lg) {
+        height: 300px;
         min-height: 300px;
     }
 
-
     @include media-breakpoint-only(md) {
+        height: 250px;
         min-height: 250px;
     }
 
     @include media-breakpoint-down(sm) {
+        height: 200px;
         min-height: 200px;
     }
 }

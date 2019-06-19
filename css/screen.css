@@ -13423,6 +13423,14 @@ body {
 
 /* =Global
 -------------------------------------------------------------- */
+.cb__main.impressum {
+  padding-top: 50px;
+}
+
+.cb__impressum__backbtn-wrapper {
+  margin-bottom: 50px;
+}
+
 #bgsvg {
   width: 100%;
   height: 100%;
@@ -13826,7 +13834,7 @@ body {
   position: relative;
   overflow: hidden;
   display: inherit;
-  height: 100%;
+  height: 480px;
   background-color: #9e5a63;
   background-size: cover;
   background-position: center center;
@@ -13843,18 +13851,21 @@ body {
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .cb__portfolio__item {
+    height: 300px;
     min-height: 300px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .cb__portfolio__item {
+    height: 250px;
     min-height: 250px;
   }
 }
 
 @media (max-width: 767.98px) {
   .cb__portfolio__item {
+    height: 200px;
     min-height: 200px;
   }
 }
@@ -14242,7 +14253,7 @@ body {
 
 .cb__some__link:hover {
   color: #644e5b;
-  text-decoation: none;
+  text-decoration: none !important;
 }
 
 /* =Style for single page
