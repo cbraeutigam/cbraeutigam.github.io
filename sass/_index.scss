@@ -2,10 +2,6 @@
 /* =Style for index page
 //-------------------------------------------------------------- */
 
-* {
-    //@include box-sizing(border-box);
-}
-
 html {
     height: 100%;
     overflow-x: hidden;
@@ -41,38 +37,11 @@ body {
 /* =Global
 -------------------------------------------------------------- */
 
-svg {
-    // background: linear-gradient(#31353e, #1b1d22);
-}
-
-
-#mysvg {
+#bgsvg {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-attachment: fixed;
-    //   z-index: 2;
-}
-
-.cb__scroll-top {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    background-color: $redwine;
-    text-align: center;
-    color: $white;
-    z-index: 3;
-
-    span {
-        color: $egg;
-        font-size: 30px;
-        position: absolute;
-        left: 12px;
-        top: 4px;
-    }
+    z-index: -1;
 }
 
 .cb__headline__section {
@@ -139,32 +108,18 @@ svg {
 /* =Hero Header
 -------------------------------------------------------------- */
 
-.zack {
-
+.cb__heroheader__divider {
     position: absolute;
     bottom: -3px;
     width: 100%;
     height: 100px;
-
-}
-
-
-.cb__heroheaderalt {
-    margin: 0 0 80px;
-    padding: 7% 20px 0;
-    text-align: center;
-    background: #131313;
 }
 
 .cb__heroheader {
     position: relative;
     min-height: 90vh;
-    // background: url(/img/header2.jpg) no-repeat fixed 50% 0;
-    // background-size: cover;
     height: 100%;
     width: 100%;
-    //border-bottom: 5px solid $egg;
-
 
     .svg {
         position: absolute;
@@ -174,10 +129,6 @@ svg {
 
 .cb__heroheader__container {
     height: 100%;
-
-    @include media-breakpoint-up(lg) {
-        //max-width: 1500px;
-    }
 }
 
 .cb__heroheader__row {
@@ -196,14 +147,9 @@ svg {
 .cb__heroheader__image {
     width: 100vh;
 
-    // @media (min-width: 376px) and (max-width: 667px) {
-    //     width: 50%;
-    // }
-
     @media (min-width: 668px) and (max-width: 768px) {
         width: 70vh;
     }
-
 
     @media (max-width: 375px) {
         width: 100%;
@@ -231,10 +177,6 @@ svg {
             box-shadow: inset 40px 0 40px -16px, inset -40px 0 40px -16px;
             color: $bgfade;
 
-            // @media (min-width: 376px) and (max-width: 667px) {
-            //     width: 50%;
-            // }
-
             @media (min-width: 668px) and (max-width: 768px) {
                 width: 70vh;
             }
@@ -244,17 +186,6 @@ svg {
             }
         }
     }
-}
-
-.tint {
-    content: '';
-    position: absolute;
-    left: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 60%;
-    background: rgba(158, 90, 99, 0.5);
 }
 
 .cb__heroheader__headline {

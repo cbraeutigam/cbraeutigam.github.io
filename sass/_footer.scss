@@ -27,9 +27,9 @@
     @include UbuntuBold;
     margin-bottom: 5px;
 
-
     &:hover {
         color: $redwine;
+        text-decoration: none;
     }
 }
 

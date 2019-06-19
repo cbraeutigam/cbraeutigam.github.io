@@ -99,7 +99,7 @@ var lineString =
   '<line stroke="rgba(255, 255, 255, 0.7)" stroke-width="1"/>' +
   '</svg>'
 
-var svg = document.querySelector('#mysvg');
+var svg = document.querySelector('#bgsvg');
 var wh, ww;
 
 var noOfCircles = 100;

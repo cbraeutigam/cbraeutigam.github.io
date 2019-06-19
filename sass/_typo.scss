@@ -1,26 +1,18 @@
 @font-face {
-  font-family: 'LektonItalic';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lekton-Italic'), url(https://fonts.gstatic.com/s/lekton/v9/SZc63FDmLaWmWpBuXS3rtUc.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'LektonRegular';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lekton'), local('Lekton-Regular'), url(https://fonts.gstatic.com/s/lekton/v9/SZc43FDmLaWmWpBuWB3p.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
   font-family: 'LektonBold';
-  font-style: normal;
+  src: url('/fonts/lekton/lekton-bold-webfont.woff2') format('woff2'),
+       url('/fonts/lekton/lekton-bold-webfont.woff') format('woff');
   font-weight: 700;
-  src: local('Lekton-Bold'), url(https://fonts.gstatic.com/s/lekton/v9/SZc73FDmLaWmWpBm4zj8kmLW.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-style: normal;
 }
+
+// @font-face {
+//   font-family: 'LektonBold';
+//   font-style: normal;
+//   font-weight: 700;
+//   src: local('Lekton-Bold'), url(https://fonts.gstatic.com/s/lekton/v9/SZc73FDmLaWmWpBm4zj8kmLW.woff2) format('woff2');
+//   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+// }
 
 @font-face {
   font-family: 'UbuntuLight';
@@ -52,16 +44,6 @@
   font-weight: 700;
   src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url(https://fonts.gstatic.com/s/ubuntu/v12/4iCv6KVjbNBYlgoCxCvjsGyN.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@mixin LektonItalic {
-  font-family: LektonItalic, Arial, Helvetica, sans-serif;
-  font-weight: 400;
-}
-
-@mixin LektonRegular {
-  font-family: LektonRegular, Arial, Helvetica, sans-serif;
-  font-weight: 400;
 }
 
 @mixin LektonBold {
