@@ -13508,6 +13508,15 @@ body {
   }
 }
 
+.cb__link {
+  color: #9e5a63;
+}
+
+.cb__link:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 /* =Hero Header
 -------------------------------------------------------------- */
 .cb__heroheader__divider {
@@ -14507,4 +14516,3 @@ body {
   background: #9e5a63;
   border: 1px solid #9e5a63;
 }
-/*# sourceMappingURL=screen.css.map */

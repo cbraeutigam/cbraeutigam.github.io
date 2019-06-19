@@ -114,6 +114,14 @@ body {
     }
 }
 
+.cb__link {
+    color: $redcherry;
+
+    &:hover {
+        text-decoration: none;
+        color: $white;
+    }
+}
 
 /* =Hero Header
 -------------------------------------------------------------- */
