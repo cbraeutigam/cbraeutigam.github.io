@@ -114,22 +114,31 @@
 &.home {
   top: 10px;
   right: 30px;
+  
+  @include media-breakpoint-down(sm) {
+    top: 0;
+    right: auto;
+    left: 15px;
+    display: flex;
+    margin-right: auto;
+  }
 }
 
   &.back {
     left: -10px;
 
-    // @include media-breakpoint-down(sm) {
-    //   left: 0;
-    // }
+    @include media-breakpoint-down(sm) {
+      left: 0;
+      margin: 0 30px;
+    }
   }
 
   &.forward {
     right: -10px;
 
-    // @include media-breakpoint-down(sm) {
-    //   right: 0;
-    // }
+    @include media-breakpoint-down(sm) {
+      right: 15px;
+    }
   }
 }
 
@@ -153,6 +162,7 @@
     width: 70px;
     line-height: 35px;
     font-size: 18px;
+    display: block;
   }
 }
 
@@ -240,6 +250,10 @@
   text-align: center;
   height: 100%;
   padding: 50px 0;
+
+  @include media-breakpoint-down(sm) {
+    padding: 15px 0;
+  }
 
   .carousel {
     height: 100%;
