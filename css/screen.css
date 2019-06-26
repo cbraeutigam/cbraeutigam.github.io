@@ -14290,6 +14290,7 @@ body {
   transform: translate3d(0, 120%, 0);
   z-index: 4;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .cb__singlepage__wrapper.open {
@@ -14381,11 +14382,11 @@ body {
 }
 
 .cb__single__btn-wrapper.back {
-  left: 0px;
+  left: -10px;
 }
 
 .cb__single__btn-wrapper.forward {
-  right: 0px;
+  right: -10px;
 }
 
 .cb__single__btn {
