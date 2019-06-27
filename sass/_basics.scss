@@ -16,132 +16,85 @@ $redcherry: #9e5a63;
 $red: #c96567;
 $greey: #97aabd;
 
-
-//Colorscheme 1
-$eggshell: #eae7dc;
-$vanilla: #d8c3a5;
-$taupe: #8e8d8a;
-$beanredlight: #e98074;
-$beanreddark: #e85a4f;
-
 .copy {
-    &:before {
-        content: "\00a9";
-    }
-}
-
-// mixin
-@mixin angle($pseudo, $flip: false, $angle: 1.5deg) {
-  // Possible values for $pseudo are: before, after, both
-  @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
-    position: relative;
-    z-index: 1;
-    $selector: if($pseudo == 'both', '&:before,&:after', '&:#{$pseudo}');
-
-    #{$selector} {
-      background: inherit;
-      content: '';
-      display: block;
-      height: 50%;
-      left: 0;
-      position: absolute;
-      right: 0;
-      z-index: -1;
-      -webkit-backface-visibility: hidden; // for Chrome Windows
-    }
-
-    @if $pseudo == 'before' {
-      #{$selector} {
-        top: 0;
-
-        @if $flip {
-          transform: skewY($angle * -1);
-          transform-origin: 0 0;
-        } @else {
-          transform: skewY($angle);
-          transform-origin: 100% 0;
-        }
-      }
-    }
-
-    @if $pseudo == 'after' {
-      #{$selector} {
-        bottom: 0;
-
-        @if $flip {
-          transform: skewY($angle);
-          transform-origin: 0 100%;
-        } @else {
-          transform: skewY($angle * -1);
-          transform-origin: 100%;
-        }
-      }
-    }
-
-    @if $pseudo == 'both' {
-      &:before {
-        top: 0;
-
-        @if $flip {
-          transform: skewY($angle * -1);
-          transform-origin: 0 0;
-        } @else {
-          transform: skewY($angle);
-          transform-origin: 100% 0;
-        }
-      }
-
-      &:after {
-        bottom: 0;
-
-        @if $flip {
-          transform: skewY($angle);
-          transform-origin: 0 0;
-        } @else {
-          transform: skewY($angle * -1);
-          transform-origin: 100%;
-        }
-      }
-    }
+  &:before {
+    content: "\00a9";
   }
 }
 
-// slanted edges here
-.edge--bottom {
-  @include angle(after);
+
+@-webkit-keyframes bounceInLeft {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
 }
 
-.edge--bottom--reverse {
-  @include angle(after, true);
+@keyframes bounceInLeft {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
 }
 
-.edge--top {
-  @include angle(before);
+.bounceInLeft {
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
 }
-
-.edge--top--reverse {
-  @include angle(before, true);
-}
-
-.edge--both {
-  @include angle(both);
-}
-
-.edge--both--reverse {
-  @include angle(both, true);
-}
-
-
-.gradient {
-background: rgb(76,76,76);
-background: -moz-radial-gradient(center, ellipse cover, rgba(76,76,76,1) 0%, rgba(19,19,19,1) 80%);
-background: -webkit-radial-gradient(center, ellipse cover, rgba(76,76,76,1) 0%,rgba(19,19,19,1) 80%);
-background: radial-gradient(ellipse at center, rgba(76,76,76,1) 0%,rgba(19,19,19,1) 80%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=1 );
-}
-
-
-
 
 
 
@@ -149,24 +102,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
   opacity: 0;
   transition-duration: .6s;
   transition-property: opacity;
- }
- 
- .carousel-fade  .carousel-item.active,
- .carousel-fade  .carousel-item-next.carousel-item-left,
- .carousel-fade  .carousel-item-prev.carousel-item-right {
-   opacity: 1;
- }
- 
- .carousel-fade .active.carousel-item-left,
- .carousel-fade  .active.carousel-item-right {
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+  opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
   opacity: 0;
- }
- 
- .carousel-fade  .carousel-item-next,
- .carousel-fade .carousel-item-prev,
- .carousel-fade .carousel-item.active,
- .carousel-fade .active.carousel-item-left,
- .carousel-fade  .active.carousel-item-prev {
+}
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-prev {
   transform: translateX(0);
   transform: translate3d(0, 0, 0);
- }
+}

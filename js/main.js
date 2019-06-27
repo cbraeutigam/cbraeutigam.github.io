@@ -6,37 +6,26 @@ $(document).ready(function () {
     }, 1500, 'easeInOutExpo');
   };
 
-  // $(window).on('scroll', function (event) {
-  //   var scrollValue = $(window).scrollTop();
-  //   if (scrollValue > $('.cb__header').height()) {
-  //     $('.cb__header').addClass('affix');
-  //   } else {
-  //     $('.cb__header').removeClass('affix');
-  //   }
-  // });
-
-
   //Finished loader
   Pace.on("done", function () {
     $(".cb__cover").addClass('animated fadeOutRight').fadeOut(1000);
-  });
 
-  //WOW Animation init
-  new WOW().init();
+    // //WOW Animation init
+    new WOW().init();
+
+    // $(".cb__heroheader__headline-wrapper").addClass("bounceInLeft");
+  });
 
   // Slider single page
   var galleryOne = new Swiper('#cb__main__slider', {
     spaceBetween: 0,
     loop: true,
     navigation: {
-      nextEl: '.next',
-      prevEl: '.prev',
+      nextEl: '.next-el',
+      prevEl: '.prev-el',
     }
   });
 
-  $(window).scroll(function () {
-    parallaxFade();
-  });
 
 
   $('.cb__portfolio__item__link').on('click', function (e) {
@@ -55,18 +44,6 @@ $(document).ready(function () {
   });
 
 });
-
-
-function parallaxFade() {
-  scrollPos = $(this).scrollTop();
-  $('.cb__heroheader').css({
-    'background-position': '50% ' + (-scrollPos / 4) + "px"
-  });
-  $('.cb__heroheader__headline').css({
-    'margin-top': (scrollPos / 4) + "px",
-    'opacity': 1 - (scrollPos / 100)
-  });
-}
 
 
 var circleString =
@@ -118,27 +95,6 @@ var lines = [];
 init();
 
 function init() {
-  svg.addEventListener('mouseenter', start);
-  svg.addEventListener('touchstart', start);
-  svg.addEventListener('mouseleave', stop);
-  svg.addEventListener('touchend', stop);
-  svg.addEventListener('mousemove', move);
-  svg.addEventListener('touchmove', move);
-
-  function start() {
-    inRegion = true;
-  }
-
-  function move(event) {
-    mouseX = event.x;
-    mouseY = event.y;
-  }
-
-  function stop() {
-    inRegion = false;
-    clearFrame();
-  }
-
   createCircles();
 }
 
@@ -175,7 +131,6 @@ function draw() {
   if (inRegion) {
     clearFrame();
     segregateCircles();
-    makeEffects();
   }
 
   window.requestAnimationFrame(draw);
@@ -210,45 +165,4 @@ function segregateCircles() {
       circlesFaraway.push(current);
     }
   }
-}
-
-function makeEffects() {
-  addBorders();
-  drawLines();
-}
-
-function addBorders() {
-  for (var i = 0;
-    (i + 1) < circlesNearby.length; i++) {
-    circlesNearby[i].setAttributeNS(null, 'stroke', '#703940');
-    circlesNearby[i].setAttributeNS(null, 'stroke-width', '5');
-  }
-  for (var i = 0;
-    (i + 1) < circlesFaraway.length; i++) {
-    circlesFaraway[i].setAttributeNS(null, 'stroke', '');
-  }
-}
-
-function drawLines() {
-  for (var i = 0; i < circlesNearby.length; i++) {
-    var current = circlesNearby[i];
-    var circleX = current.getAttribute('cx');
-    var circleY = current.getAttribute('cy');
-
-    var line = drawLine(mouseX, mouseY, circleX, circleY);
-
-    svg.appendChild(line);
-    lines.push(line);
-  }
-}
-
-function drawLine(x1, y1, x2, y2) {
-  var line = parser.parseFromString(lineString, 'image/svg+xml').querySelector('svg > *');
-
-  line.setAttributeNS(null, 'x1', x1);
-  line.setAttributeNS(null, 'y1', y1);
-  line.setAttributeNS(null, 'x2', x2);
-  line.setAttributeNS(null, 'y2', y2);
-
-  return line;
 }

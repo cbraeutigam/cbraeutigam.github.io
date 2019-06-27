@@ -112,6 +112,15 @@ body {
         font-size: 14px;
         line-height: 20px;
     }
+
+    a {
+        color: $redcherry;
+
+        &:hover {
+            color: $redwine;
+            text-decoration: none;
+        }
+    }
 }
 
 .cb__link {
