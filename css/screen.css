@@ -14274,8 +14274,16 @@ body {
   }
 }
 
-.cb__single__slider .carousel {
-  height: 100%;
+.cb__single__slider .swiper-button-next,
+.cb__single__slider .swiper-button-prev {
+  background: none !important;
+  height: auto;
+  width: auto;
+}
+
+.cb__single__slider .swiper-button-next .cb__icon,
+.cb__single__slider .swiper-button-prev .cb__icon {
+  font-size: 50px;
 }
 
 .cb__single__slider__control__inner {
@@ -14311,4 +14319,3 @@ body {
   background: #9e5a63;
   border: 1px solid #9e5a63;
 }
-/*# sourceMappingURL=screen.css.map */

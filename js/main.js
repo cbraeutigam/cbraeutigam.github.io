@@ -27,30 +27,48 @@ $(document).ready(function () {
   });
 
   var swiperV = new Swiper('.swiper-container-v', {
-    pagination: '.swiper-pagination-v',
-    paginationClickable: true,
     direction: 'horizontal',
     spaceBetween: 50,
     nested: true,
-    loop: true
+    loop: true,
+    navigation: {
+      nextEl: '.sbn',
+      prevEl: '.sbp',
+    },
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    }
 });
 
 var swiperV1 = new Swiper('.swiper-container-v1', {
-  pagination: '.swiper-pagination-v',
-  paginationClickable: true,
   direction: 'horizontal',
   spaceBetween: 50,
   nested: true,
-  loop: true
+  loop: true,
+  navigation: {
+    nextEl: '.sbn1',
+    prevEl: '.sbp1',
+  },
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  }
 });
 
-  var swiperV2 = new Swiper('.swiper-container-v2', {
-    pagination: '.swiper-pagination-v',
-    paginationClickable: true,
-    direction: 'horizontal',
-    spaceBetween: 50,
-    nested: true,
-    loop: true
+var swiperV2 = new Swiper('.swiper-container-v2', {
+  direction: 'horizontal',
+  spaceBetween: 50,
+  nested: true,
+  loop: true,
+  navigation: {
+    nextEl: '.sbn2',
+    prevEl: '.sbp2',
+  },
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  }
 });
 
 
