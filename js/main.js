@@ -26,6 +26,33 @@ $(document).ready(function () {
     }
   });
 
+  var swiperV = new Swiper('.swiper-container-v', {
+    pagination: '.swiper-pagination-v',
+    paginationClickable: true,
+    direction: 'horizontal',
+    spaceBetween: 50,
+    nested: true,
+    loop: true
+});
+
+var swiperV1 = new Swiper('.swiper-container-v1', {
+  pagination: '.swiper-pagination-v',
+  paginationClickable: true,
+  direction: 'horizontal',
+  spaceBetween: 50,
+  nested: true,
+  loop: true
+});
+
+  var swiperV2 = new Swiper('.swiper-container-v2', {
+    pagination: '.swiper-pagination-v',
+    paginationClickable: true,
+    direction: 'horizontal',
+    spaceBetween: 50,
+    nested: true,
+    loop: true
+});
+
 
 
   $('.cb__portfolio__item__link').on('click', function (e) {

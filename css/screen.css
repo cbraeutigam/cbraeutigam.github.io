@@ -14245,12 +14245,18 @@ body {
   }
 }
 
-#cb__main__slider .swiper-wrapper {
+.swiper-wrapper {
   height: 80vh;
 }
 
+.swiper-container-v .swiper-wrapper,
+.swiper-container-v1 .swiper-wrapper,
+.swiper-container-v2 .swiper-wrapper {
+  height: auto;
+}
+
 @media (max-width: 767.98px) {
-  #cb__main__slider .swiper-wrapper {
+  .swiper-wrapper {
     height: 100%;
   }
 }
