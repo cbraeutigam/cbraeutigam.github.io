@@ -13128,6 +13128,10 @@ readers do not read off random characters that represent icons */
   content: "\00a9";
 }
 
+.wow {
+  opacity: 0;
+}
+
 @-webkit-keyframes bounceInLeft {
   0%, 60%, 75%, 90%, 100% {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);

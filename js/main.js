@@ -11,10 +11,16 @@ $(document).ready(function () {
     $(".cb__cover").addClass('animated fadeOutRight').fadeOut(1000);
 
     // //WOW Animation init
-    new WOW().init();
-
-    // $(".cb__heroheader__headline-wrapper").addClass("bounceInLeft");
+    new WOW({ callback: afterReveal }).init(); 
   });
+
+  function afterReveal(el) {
+    el.addEventListener('animationstart', function (event) {
+      $('.wow').each(function () {
+        $(this).css('opacity', 1);
+      });
+    });
+  }
 
   // Slider single page
   var galleryOne = new Swiper('#cb__main__slider', {
