@@ -42,7 +42,7 @@ $(document).ready(function () {
       prevEl: '.sbp',
     },
     autoplay: {
-      delay: 3500,
+      delay: 5500,
       disableOnInteraction: false,
     }
 });
@@ -57,7 +57,7 @@ var swiperV1 = new Swiper('.swiper-container-v1', {
     prevEl: '.sbp1',
   },
   autoplay: {
-    delay: 3500,
+    delay: 5500,
     disableOnInteraction: false,
   }
 });
@@ -72,7 +72,7 @@ var swiperV2 = new Swiper('.swiper-container-v2', {
     prevEl: '.sbp2',
   },
   autoplay: {
-    delay: 3500,
+    delay: 5500,
     disableOnInteraction: false,
   }
 });

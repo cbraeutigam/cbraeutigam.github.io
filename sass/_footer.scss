@@ -53,6 +53,7 @@
 }
 
 .cb__some__link {
+    position: relative;
     font-size: 40px;
     color: $redcherry;
     text-decoration: none;
@@ -60,5 +61,13 @@
     &:hover {
         color: $redwine;
         text-decoration: none !important;
+    }
+
+    .pdf {
+        position: absolute;
+        color: $antrazit;
+        top: 0px;
+        left: 7px;
+        font-size: 29px;
     }
 }

@@ -59,27 +59,27 @@ body {
     line-height: 55px;
     @include LektonBold;
     text-transform: uppercase;
-    margin: 30px 0 0;
+    margin: 30px 0;
     position: relative;
     display: inline-block;
     color: $egg;
     letter-spacing: 3pt;
 
-    &:after {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        right: 0;
-        -ms-transform: translateX(110%) translateY(-1.2rem);
-        transform: translateX(110%) translateY(-1.2rem);
-        background-color: $redcherry;
-        height: .25rem;
-        width: 1rem;
+    // &:after {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: -5px;
+    //     right: 0;
+    //     -ms-transform: translateX(110%) translateY(-1.2rem);
+    //     transform: translateX(110%) translateY(-1.2rem);
+    //     background-color: $redcherry;
+    //     height: .25rem;
+    //     width: 1rem;
 
-        @include media-breakpoint-down(sm) {
-            bottom: -6px;
-        }
-    }
+    //     @include media-breakpoint-down(sm) {
+    //         bottom: -6px;
+    //     }
+    // }
 
     .cb__single__headline & {
         margin: 15px 0 0;
@@ -137,12 +137,14 @@ body {
 
 .cb__heroheader__divider {
     position: absolute;
-    bottom: -3px;
+    bottom: 0px;
     width: 100%;
-    height: 100px;
+    height: 10px;
 }
 
 .cb__heroheader {
+    display: flex;
+    align-items: center;
     position: relative;
     min-height: 90vh;
     height: 100%;
@@ -151,6 +153,24 @@ body {
     .svg {
         position: absolute;
         top: -300px;
+    }
+}
+
+.cb__heroheader__col {
+    flex: 1;
+
+    &.title {
+        display: flex;
+        justify-content: center;
+    }
+
+    &.bg {
+        background-image:url(/img/header_small.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        background-position: center;
+        align-self: normal;
     }
 }
 
@@ -172,15 +192,7 @@ body {
 }
 
 .cb__heroheader__image {
-    width: 100vh;
-
-    @media (min-width: 668px) and (max-width: 768px) {
-        width: 70vh;
-    }
-
-    @media (max-width: 375px) {
-        width: 100%;
-    }
+    width: 100%;
 }
 
 .cb__heroheader__image-wrapper {
@@ -226,8 +238,6 @@ body {
     @include media-breakpoint-down(sm) {
         font-size: 40px;
         line-height: 40px;
-        margin-left: 6%;
-        margin-top: 25%;
     }
 
     @include media-breakpoint-between(sm, md) {
@@ -238,25 +248,16 @@ body {
     @media (min-width: 376px) and (max-width: 667px) {
         font-size: 36px;
         line-height: 36px;
-        margin-left: -5%;
-        margin-top: 20%;
     }
 
     @media (min-width: 668px) and (max-width: 768px) {
         font-size: 80px;
         line-height: 80px;
-        margin-left: 10%;
-        margin-top: 20%;
     }
 
     @media (min-width: 769px) and (max-width: 1024px) {
         font-size: 60px;
         line-height: 70px;
-        margin-left: 10%;
-    }
-
-    @include media-breakpoint-between(lg, xl) {
-        margin-left: 3%;
     }
 
     .dark {
@@ -299,6 +300,9 @@ body {
     text-align: center;
 }
 
+.cb__about__banner__content {
+    margin: 0 auto;
+}
 
 .cb__about__rect {
     background: $redwine;
@@ -351,24 +355,19 @@ body {
 }
 
 .cb__about__banner {
-    background: $redcherry;
     position: relative;
     margin-bottom: 40px;
     padding: 20px 0;
-    overflow: hidden;
 }
 
-.cb__about__banner__headline-wrapper {
-    display: flex;
-    align-items: center;
+.cb__about__banner__row {
+    justify-content: center;
+    margin: 0 20px;
 }
 
-.cb__about__banner__headline {
-    margin: 0;
-
-    @include media-breakpoint-down(md) {
-        margin: 0 0 20px;
-    }
+.cb__about__banner__inner {
+    background: $redcherry;
+    padding-bottom: 15px;
 }
 
 /* =Overlay Thumb Portfolio
@@ -394,7 +393,7 @@ body {
 }
 
 .cb__porfolio__wrapper {
-    margin: 30px 0 60px;
+    margin: 0 0 60px;
 }
 
 .cb__portfolio__item__outer {
@@ -412,12 +411,8 @@ body {
     background-size: cover;
     background-position: center center;
     background-blend-mode: hard-light;
-    box-shadow: 0 1px 0 rgba(30, 30, 32, 0.2) inset, 0 8px 16px rgba(0, 0, 0, 0.5);
     transition: box-shadow 150ms ease-out;
     min-height: 480px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
 
     @include media-breakpoint-only(lg) {
         height: 300px;
