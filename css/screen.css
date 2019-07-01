@@ -13690,6 +13690,12 @@ body {
   margin: 0 20px;
 }
 
+@media (max-width: 991.98px) {
+  .cb__about__banner__row {
+    margin: 0 15px;
+  }
+}
+
 .cb__about__banner__inner {
   background: #9e5a63;
   padding-bottom: 15px;
@@ -14050,6 +14056,7 @@ body {
   .cb__single__content {
     margin-bottom: 0;
     padding-right: 15px;
+    text-align: left;
   }
 }
 
