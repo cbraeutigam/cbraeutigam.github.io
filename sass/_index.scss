@@ -151,6 +151,10 @@ body {
     width: 100%;
     margin-bottom: 20px;
 
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+    }
+
     .svg {
         position: absolute;
         top: -300px;
@@ -163,6 +167,7 @@ body {
     &.title {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     &.bg {
@@ -239,6 +244,7 @@ body {
     @include media-breakpoint-down(sm) {
         font-size: 40px;
         line-height: 40px;
+        max-width: 310px;
     }
 
     @include media-breakpoint-between(sm, md) {
@@ -252,8 +258,8 @@ body {
     }
 
     @media (min-width: 668px) and (max-width: 768px) {
-        font-size: 80px;
-        line-height: 80px;
+        font-size: 50px;
+        line-height: 50px;
     }
 
     @media (min-width: 769px) and (max-width: 1024px) {
@@ -283,7 +289,7 @@ body {
 
         @media (min-width: 668px) and (max-width: 768px) {
             font-size: 50px;
-            line-height: 60px;
+            line-height: 50px;
         }
 
         @media (max-width: 375px) {

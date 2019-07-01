@@ -13426,6 +13426,15 @@ body {
   margin-bottom: 20px;
 }
 
+@media (max-width: 767.98px) {
+  .cb__heroheader {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .cb__heroheader .svg {
   position: absolute;
   top: -300px;
@@ -13444,6 +13453,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cb__heroheader__col.bg {
@@ -13531,6 +13543,7 @@ body {
   .cb__heroheader__headline {
     font-size: 40px;
     line-height: 40px;
+    max-width: 310px;
   }
 }
 
@@ -13550,8 +13563,8 @@ body {
 
 @media (min-width: 668px) and (max-width: 768px) {
   .cb__heroheader__headline {
-    font-size: 80px;
-    line-height: 80px;
+    font-size: 50px;
+    line-height: 50px;
   }
 }
 
@@ -13592,7 +13605,7 @@ body {
 @media (min-width: 668px) and (max-width: 768px) {
   .cb__heroheader__headline .second {
     font-size: 50px;
-    line-height: 60px;
+    line-height: 50px;
   }
 }
 
