@@ -13423,6 +13423,7 @@ body {
   min-height: 90vh;
   height: 100%;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .cb__heroheader .svg {
@@ -14041,11 +14042,14 @@ body {
 
 .cb__single__content {
   margin-bottom: 25px;
+  text-align: justify;
+  padding-right: 60px;
 }
 
 @media (max-width: 767.98px) {
   .cb__single__content {
     margin-bottom: 0;
+    padding-right: 15px;
   }
 }
 
@@ -14074,6 +14078,15 @@ body {
   font-size: 14px;
   line-height: 18px;
   margin-top: 0;
+}
+
+.cb__single__info__para a {
+  color: #9e5a63;
+}
+
+.cb__single__info__para a:hover {
+  text-decoration: none;
+  color: #644e5b;
 }
 
 /* =Controls
@@ -14313,3 +14326,4 @@ body {
   background: #9e5a63;
   border: 1px solid #9e5a63;
 }
+/*# sourceMappingURL=screen.css.map */

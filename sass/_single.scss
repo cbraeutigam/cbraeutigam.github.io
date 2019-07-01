@@ -52,9 +52,12 @@
 
 .cb__single__content {
   margin-bottom: 25px;
+  text-align: justify;
+  padding-right: 60px;
 
   @include media-breakpoint-down(sm) {
     margin-bottom: 0;
+    padding-right: 15px;
   }
 }
 
@@ -84,6 +87,15 @@
   font-size: 14px;
   line-height: 18px;
   margin-top: 0;
+
+  a {
+    color: $redcherry;
+
+    &:hover {
+      text-decoration:none;
+      color: $redwine;
+    }
+  }
 }
 
 
