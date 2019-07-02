@@ -69,12 +69,6 @@
   margin: 0 0 auto auto;
 }
 
-.cb__single__info__item {
-  @include media-breakpoint-down(sm) {
-    // margin: 0 10px;
-  }
-}
-
 .cb__single__info__headline {
   @include LektonBold;
   font-size: 18px;

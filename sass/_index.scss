@@ -65,22 +65,6 @@ body {
     color: $egg;
     letter-spacing: 3pt;
 
-    // &:after {
-    //     content: "";
-    //     position: absolute;
-    //     bottom: -5px;
-    //     right: 0;
-    //     -ms-transform: translateX(110%) translateY(-1.2rem);
-    //     transform: translateX(110%) translateY(-1.2rem);
-    //     background-color: $redcherry;
-    //     height: .25rem;
-    //     width: 1rem;
-
-    //     @include media-breakpoint-down(sm) {
-    //         bottom: -6px;
-    //     }
-    // }
-
     .cb__single__headline & {
         margin: 15px 0 0;
     }
